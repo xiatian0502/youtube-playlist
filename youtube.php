@@ -1,6 +1,6 @@
 <?php
 
-$playlistIds = ['PLQWMqkNuwweK2NUFEex3Jked5lBWcUIJc&index=6', 'PLNXJ_YC1PDA1L6H_ec0pn25QkDdK_8KrB','PLrVKx-I9kvCSllIRl4wpzLpJtUPUOSPb8']; // 在此处定义播放列表ID
+$playlistIds = ['PLQWMqkNuwweK2NUFEex3Jked5lBWcUIJc&index=6', 'PLNXJ_YC1PDA1L6H_ec0pn25QkDdK_8KrB', 'PLrVKx-I9kvCSllIRl4wpzLpJtUPUOSPb8']; // 在此处定义播放列表ID
 $maxResults = 20;
 $API_key = 'AIzaSyAONZd3f8TN6QZS39WCeddl7YqP1TdhkkQ'; // 你的API_KEY
 
