@@ -1,9 +1,8 @@
-
 name: Generate YouTube Playlist
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # 每天UTC时间0点运行一次
+    - cron: '0 0 * * *'  # 定时任务，UTC时间每日0点
   push:
     branches:
       - main
@@ -14,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write  # 确保contents: write权限
+      contents: write
 
     steps:
       - name: Checkout repository content
@@ -49,6 +48,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git pull --rebase
           git add playlist.m3u
           git commit -m 'Update playlist.m3u'
           git push
