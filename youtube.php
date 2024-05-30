@@ -41,19 +41,13 @@ $categories = [];
 $apiKeyIndex = 0;
 
 foreach ($playlistIds as $playlistId) {
-    $apiKey = $API_keys[$apiKeyIndex];
+    $apiKey = $API_keys[array_rand($API_keys)];
     $videoList = fetchWithRetry('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=' . $maxResults . '&playlistId=' . $playlistId . '&key=' . $apiKey);
 
     // 如果 API 调用失败，尝试下一个 API 密钥
     if (!$videoList || !isset($videoList['items'])) {
-        if ($apiKeyIndex < count($API_keys) - 1) {
-            $apiKeyIndex++;
-            $apiKey = $API_keys[$apiKeyIndex];
-            $videoList = fetchWithRetry('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=' . $maxResults . '&playlistId=' . $playlistId . '&key=' . $apiKey);
-        } else {
-            $categories["未分类"][] = "#播放列表 " . $playlistId . " 未找到";
-            continue;
-        }
+        $categories["未分类"][] = "#播放列表 " . $playlistId . " 未找到";
+        continue;
     }
 
     foreach ($videoList['items'] as $item) {
