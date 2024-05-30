@@ -39,3 +39,7 @@ jobs:
         run: php youtube.php
 
       - name: List directory content
+        run: ls -la
+
+      - name: Display content of playlist.m3u
+        run: cat playlist.m3u ||
