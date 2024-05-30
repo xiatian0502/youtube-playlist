@@ -44,18 +44,24 @@ function getAPIKey(&$apiKeyIndex, $apiKeyCount, $API_keys) {
     return $apiKey;
 }
 
-foreach ($playlistIds as $playlistId) {
+function makeRequest($url) {
+    global $apiKeyIndex, $apiKeyCount, $API_keys;
     do {
         $API_key = getAPIKey($apiKeyIndex, $apiKeyCount, $API_keys);
-        $api_url = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=' . $maxResults . '&playlistId=' . $playlistId . '&key=' . $API_key;
-        $videoListResponse = @file_get_contents($api_url);
-        
-        if ($videoListResponse === FALSE) {
-            sleep(1); // 如果调用失败，等待1秒再重复
-        }
-    } while ($videoListResponse === FALSE);
+        $fullUrl = $url . '&key=' . $API_key;
+        $response = @file_get_contents($fullUrl);
 
-    $videoList = json_decode($videoListResponse, true);
+        if ($response === FALSE) {
+            usleep(500000); // 如果调用失败，等待 0.5 秒再重复
+        }
+    } while ($response === FALSE);
+
+    return json_decode($response, true);
+}
+
+foreach ($playlistIds as $playlistId) {
+    $apiUrl = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=' . $maxResults . '&playlistId=' . $playlistId;
+    $videoList = makeRequest($apiUrl);
 
     // 如果API请求失败或没有找到视频项，添加未分类信息并跳过该播放列表
     if (!$videoList || !isset($videoList['items'])) {
@@ -68,26 +74,18 @@ foreach ($playlistIds as $playlistId) {
         $videoTitle = $item['snippet']['title'];
         $channelId = $item['snippet']['channelId'];
 
-        do {
-            $API_key = getAPIKey($apiKeyIndex, $apiKeyCount, $API_keys);
-            $channelInfoResponse = @file_get_contents('https://www.googleapis.com/youtube/v3/channels?part=snippet&id=' . $channelId . '&key=' . $API_key);
-            
-            if ($channelInfoResponse === FALSE) {
-                sleep(1); // 如果调用失败，等待1秒再重复
-            }
-        } while ($channelInfoResponse === FALSE);
-
-        $channelInfo = json_decode($channelInfoResponse, true);
+        $channelApiUrl = 'https://www.googleapis.com/youtube/v3/channels?part=snippet&id=' . $channelId;
+        $channelInfo = makeRequest($channelApiUrl);
         $channelTitle = isset($channelInfo['items'][0]['snippet']['title']) ? $channelInfo['items'][0]['snippet']['title'] : '未知频道';
 
         $command = "/home/runner/.local/bin/yt-dlp -f best --get-url --no-playlist --no-warnings --force-generic-extractor --user-agent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0' --youtube-skip-dash-manifest " . escapeshellarg($youtubeUrl);
-        
+
         do {
             $streamUrl = shell_exec($command);
             if ($streamUrl !== null && strpos($streamUrl, 'http') === 0) {
                 $streamUrl = trim($streamUrl);
             } else {
-                sleep(1); // 如果调用失败，等待1秒再重复
+                usleep(600000); // 如果调用失败，等待 0.6 秒再重复
             }
         } while (!isset($streamUrl) || strpos($streamUrl, 'http') !== 0);
 
@@ -97,7 +95,7 @@ foreach ($playlistIds as $playlistId) {
         $categories[$channelTitle][] = "#EXTINF:-1 group-title=\"" . $channelTitle . "\"," . $videoTitle . PHP_EOL . $streamUrl . PHP_EOL;
 
         // 延时以降低API调用频率，减少被限制的可能性
-        usleep(250000); // 250毫秒
+        usleep(600000); // 600毫秒
     }
 }
 
