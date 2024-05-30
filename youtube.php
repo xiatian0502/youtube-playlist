@@ -40,19 +40,20 @@ $API_keys = [
 $categories = [];
 $apiKeyIndex = 0;
 
-function fetchWithRetry($url, &$apiKeyIndex, $apiKeys, $maxRetries = 5, $delay = 5) {
+function fetchWithRetry($url, $apiKeys, &$apiKeyIndex, $maxRetries = 5, $delay = 5) {
     $retryCount = 0;
     while ($retryCount < $maxRetries) {
         $apiKey = $apiKeys[$apiKeyIndex];
-        $url = str_replace('&key=', "&key=$apiKey", $url);
-        
-        $response = file_get_contents($url);
-        if ($response !== false) {
+        $urlWithKey = $url . '&key=' . $apiKey;
+
+        $response = @file_get_contents($urlWithKey);
+        if ($response) {
             return json_decode($response, true);
         }
-        // 替换失败时的 API 密钥并等待处理
+
+        // 切换到下一个 API 密钥
         $apiKeyIndex = ($apiKeyIndex + 1) % count($apiKeys);
-        sleep($delay); 
+        sleep($delay);  // 等待更长时间再试
         $retryCount++;
     }
     return null;
@@ -62,12 +63,12 @@ $log = 'command_output.txt';
 file_put_contents($log, "Start Execution\n", FILE_APPEND);
 
 foreach ($playlistIds as $playlistId) {
-    $apiUrl = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=' . $maxResults . '&playlistId=' . $playlistId . '&key=';
-
-    $videoList = fetchWithRetry($apiUrl, $apiKeyIndex, $API_keys);
+    $apiUrl = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=' . $maxResults . '&playlistId=' . $playlistId;
+    $videoList = fetchWithRetry($apiUrl, $API_keys, $apiKeyIndex);
 
     // 记录API请求和响应
-    file_put_contents($log, "API Request: {$apiUrl}{$API_keys[$apiKeyIndex]}\nResponse: " . print_r($videoList, true) . "\n", FILE_APPEND);
+    file_put_contents($log, "API Request: $apiUrl\nResponse: " . print_r($videoList, true) . "\n", FILE_APPEND);
+
     // 如果 API 调用失败，尝试下一个 API 密钥
     if (!$videoList || !isset($videoList['items'])) {
         $categories["未分类"][] = "#播放列表 " . $playlistId . " 未找到";
@@ -80,15 +81,14 @@ foreach ($playlistIds as $playlistId) {
         $channelId = $item['snippet']['channelId'];
 
         // 获取频道名称
-        $channelUrl = 'https://www.googleapis.com/youtube/v3/channels?part=snippet&id=' . $channelId . '&key=';
-        $channelInfo = fetchWithRetry($channelUrl, $apiKeyIndex, $API_keys);
-
+        $channelUrl = 'https://www.googleapis.com/youtube/v3/channels?part=snippet&id=' . $channelId;
+        $channelInfo = fetchWithRetry($channelUrl, $API_keys, $apiKeyIndex);
         $channelTitle = isset($channelInfo['items'][0]['snippet']['title']) ? $channelInfo['items'][0]['snippet']['title'] : '未知频道';
 
         // 记录频道请求和响应
-        file_put_contents($log, "Channel Request: {$channelUrl}{$API_keys[$apiKeyIndex]}\nResponse: " . print_r($channelInfo, true) . "\n", FILE_APPEND);
+        file_put_contents($log, "Channel Request: $channelUrl\nResponse: " . print_r($channelInfo, true) . "\n", FILE_APPEND);
 
-        $command = "/usr/local/bin/yt-dlp -f best --get-url --no-playlist --no-warnings --force-generic-extractor --user-agent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0' --youtube-skip-dash-manifest " . escapeshellarg($youtubeUrl);
+        $command = "/home/runner/.local/bin/yt-dlp -f best --get-url --no-playlist --no-warnings --force-generic-extractor --user-agent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0' --youtube-skip-dash-manifest " . escapeshellarg($youtubeUrl);
         $streamUrl = shell_exec($command);
 
         // 记录yt-dlp命令和输出
@@ -101,4 +101,24 @@ foreach ($playlistIds as $playlistId) {
         }
 
         if (!isset($categories[$channelTitle])) {
-            $
+            $categories[$channelTitle] = [];
+        }
+        $categories[$channelTitle][] = "#EXTINF:-1 group-title=\"" . $channelTitle . "\"," . $videoTitle . PHP_EOL . $streamUrl . PHP_EOL;
+    }
+}
+
+$file = fopen('playlist.m3u', 'w');
+fwrite($file, "#EXTM3U" . PHP_EOL);
+
+foreach ($categories as $category => $videos) {
+    if (!empty($videos)) {
+        foreach ($videos as $video) {
+            fwrite($file, $video);
+        }
+    }
+}
+
+fclose($file);
+
+file_put_contents($log, "End Execution\n", FILE_APPEND);
+?>
