@@ -47,7 +47,7 @@ function fetchWithRetry($url, $apiKeys, &$apiKeyIndex, $maxRetries = 5, $delay =
         $urlWithKey = $url . '&key=' . $apiKey;
 
         $response = @file_get_contents($urlWithKey);
-        if ($response) {
+        if ($response !== false) {
             return json_decode($response, true);
         }
 
@@ -96,6 +96,8 @@ foreach ($playlistIds as $playlistId) {
 
         // 处理不支持的URL和错误情况
         if (strpos($streamUrl, 'ERROR') !== false || !$streamUrl) {
+            // 记录不支持的URL或错误情况
+            file_put_contents($log, "Unsupported URL: $youtubeUrl\n", FILE_APPEND);
             continue; // 跳过这些错误的视频继续下一个
         }
 
@@ -120,9 +122,3 @@ foreach ($categories as $category => $videos) {
         foreach ($videos as $video) {
             fwrite($file, $video);
         }
-    }
-}
-
-fclose($file);
-
-file_put_contents($log, "End Execution\n", FILE_APPEND);
