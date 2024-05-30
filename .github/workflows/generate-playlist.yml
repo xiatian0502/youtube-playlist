@@ -39,9 +39,10 @@ jobs:
         run: ls -la
 
       - name: Display content of playlist.m3u
-        run: cat playlist.m3u
+        run: cat playlist.m3u || echo 'playlist.m3u 不存在'
 
       - name: Commit and push changes
+        if: success()
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
