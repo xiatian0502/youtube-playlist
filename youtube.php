@@ -26,17 +26,35 @@ $playlistIds = [
     'PL0VLshn35eZIQ8eIvFcj0TiuiiVl08Jvf',    // 橘子老师國外聲樂老師超真實銳評
     'PLk3vQVLQ1uijSRpwOspimMhNAiT0qHUka'    // 錫蘭Ceylan
 ];
+
 $maxResults = 30;
-$API_key = 'AIzaSyAONZd3f8TN6QZS39WCeddl7YqP1TdhkkQ'; 
+$API_keys = [
+    'AIzaSyAONZd3f8TN6QZS39WCeddl7YqP1TdhkkQ',   // 首选 API 密钥
+    'AIzaSyA2WlZZiiOBXsYS5_YldErN3ZqoWtLe3-w',   // 替换为第二个 API 密钥
+    'AIzaSyAz9FWDUjDZp9lNRj-uDi3xvYyFSn-EI9M',   // 替换为第二个 API 密钥
+    'AIzaSyD6QsrG7vTttcpaktIWr7CyPJYRDsUJN6U',   // 替换为第二个 API 密钥
+    'AIzaSyB4cNp3RrHH81bfX_WxIith3jF8RPHOvyc',   // 替换为第二个 API 密钥
+    'AIzaSyAtdWeFxtIT6jyxksh81FNpCSNjyTLlXWM',   // 替换为第二个 API 密钥
+    // 你可以根据需要添加更多 API 密钥
+];
 
 $categories = [];
+$apiKeyIndex = 0;
 
 foreach ($playlistIds as $playlistId) {
-    $videoList = json_decode(file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=' . $maxResults . '&playlistId=' . $playlistId . '&key=' . $API_key), true);
+    $apiKey = $API_keys[$apiKeyIndex];
+    $videoList = json_decode(file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=' . $maxResults . '&playlistId=' . $playlistId . '&key=' . $apiKey), true);
 
+    // 如果 API 调用失败，尝试下一个 API 密钥
     if (!$videoList || !isset($videoList['items'])) {
-        $categories["未分类"][] = "#播放列表 " . $playlistId . " 未找到";
-        continue;
+        if ($apiKeyIndex < count($API_keys) - 1) {
+            $apiKeyIndex++;
+            $apiKey = $API_keys[$apiKeyIndex];
+            $videoList = json_decode(file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=' . $maxResults . '&playlistId=' . $playlistId . '&key=' . $apiKey), true);
+        } else {
+            $categories["未分类"][] = "#播放列表 " . $playlistId . " 未找到";
+            continue;
+        }
     }
 
     foreach ($videoList['items'] as $item) {
@@ -45,7 +63,7 @@ foreach ($playlistIds as $playlistId) {
         $channelId = $item['snippet']['channelId'];
 
         // 获取频道名称
-        $channelInfo = json_decode(file_get_contents('https://www.googleapis.com/youtube/v3/channels?part=snippet&id=' . $channelId . '&key=' . $API_key), true);
+        $channelInfo = json_decode(file_get_contents('https://www.googleapis.com/youtube/v3/channels?part=snippet&id=' . $channelId . '&key=' . $apiKey), true);
         $channelTitle = isset($channelInfo['items'][0]['snippet']['title']) ? $channelInfo['items'][0]['snippet']['title'] : '未知频道';
 
         $command = "/home/runner/.local/bin/yt-dlp -f best --get-url --no-playlist --no-warnings --force-generic-extractor --user-agent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0' --youtube-skip-dash-manifest " . escapeshellarg($youtubeUrl);
