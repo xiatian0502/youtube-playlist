@@ -34,10 +34,10 @@ foreach ($playlistIds as $playlistId) {
         $command = "/home/runner/.local/bin/yt-dlp -f best --get-url --no-playlist --no-warnings --force-generic-extractor --user-agent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0' --youtube-skip-dash-manifest " . escapeshellarg($youtubeUrl);
         $streamUrl = shell_exec($command);
 
-        if ($streamUrl !== null) {
+        if ($streamUrl !== null && strpos($streamUrl, 'http') === 0) {
             $streamUrl = trim($streamUrl);
         } else {
-            $streamUrl = $youtubeUrl;
+            $streamUrl = $youtubeUrl;  // 使用原始URL
         }
 
         $category = categorizeVideo($videoTitle);
@@ -60,7 +60,4 @@ foreach ($categories as $category => $videos) {
 }
 
 fclose($file);
-
-header('Content-Type: audio/x-mpegurl');
-header('Content-Disposition: attachment; filename="playlist.m3u"');
 ?>
