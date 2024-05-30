@@ -51,18 +51,14 @@ jobs:
 
       - name: Clone target repo
         run: |
-          git clone https://github.com/your-username/public-playlist.git
+          git clone https://xiatian0502:${{ secrets.PUBLIC0PLAYLIST }}@github.com/xiatian0502/public-playlist.git
           cd public-playlist
           git checkout -b update-playlist || git checkout update-playlist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Copy and commit
         run: |
-          cp playlist.m3u public-playlist/
-          cd public-playlist
+          cp ../playlist.m3u .
           git add playlist.m3u
           git commit -m 'Update playlist.m3u'
           git push origin update-playlist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        working-directory: public-playlist
