@@ -15,7 +15,7 @@ function categorizeVideo($title) {
         return "最HOT 5000秒";
     } else if (strpos($title, "【每日必看】") !== false) {
         return "每日必看";
-    } 
+    }
     return "其他";
 }
 
@@ -44,7 +44,7 @@ foreach ($playlistIds as $playlistId) {
         if (!isset($categories[$category])) {
             $categories[$category] = [];
         }
-        $categories[$category][] = "#EXTINF:-1," . $videoTitle . PHP_EOL . $streamUrl . PHP_EOL;
+        $categories[$category][] = "#EXTINF:-1 group-title=\"" . $category . "\"," . $videoTitle . PHP_EOL . $streamUrl . PHP_EOL;
     }
 }
 
@@ -53,7 +53,6 @@ fwrite($file, "#EXTM3U" . PHP_EOL);
 
 foreach ($categories as $category => $videos) {
     if (!empty($videos)) {
-        fwrite($file, "#EXT-X-GROUP-ID:" . $category . PHP_EOL);
         foreach ($videos as $video) {
             fwrite($file, $video);
         }
@@ -64,3 +63,4 @@ fclose($file);
 
 header('Content-Type: audio/x-mpegurl');
 header('Content-Disposition: attachment; filename="playlist.m3u"');
+?>
