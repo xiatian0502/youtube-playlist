@@ -4,6 +4,7 @@ $playlistIds = [
     'PLQWMqkNuwweK2NUFEex3Jked5lBWcUIJc&index=6',
     'PLNXJ_YC1PDA1L6H_ec0pn25QkDdK_8KrB',
     'PLrVKx-I9kvCTibDObcPz6BiUwtcv66jzM',
+    'PLQWMqkNuwweLu5hFpWCVHiRkdHhrHBpop',
     'PLrVKx-I9kvCSllIRl4wpzLpJtUPUOSPb8'  // 新添加的播放列表ID
 ];
 $maxResults = 20;
