@@ -1,4 +1,4 @@
-name: Generate YouTube Playlist
+name: Generate and Push YouTube Playlist
 
 on:
   schedule:
@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  generate-playlist:
+  generate-and-push-playlist:
     runs-on: ubuntu-latest
 
     permissions:
@@ -44,18 +44,25 @@ jobs:
       - name: Display content of playlist.m3u
         run: cat playlist.m3u || echo 'playlist.m3u 不存在'
 
-      - name: Stash local changes
-        run: |
-          git stash
-
-      - name: Commit and push changes
+      - name: Configure git
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git pull --rebase
-          git stash pop
+
+      - name: Clone target repo
+        run: |
+          git clone https://github.com/your-username/public-playlist.git
+          cd public-playlist
+          git checkout -b update-playlist || git checkout update-playlist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Copy and commit
+        run: |
+          cp playlist.m3u public-playlist/
+          cd public-playlist
           git add playlist.m3u
           git commit -m 'Update playlist.m3u'
-          git push
+          git push origin update-playlist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
