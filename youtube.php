@@ -29,38 +29,30 @@ $playlistIds = [
 
 $maxResults = 30;
 $API_keys = [
-    'AIzaSyAONZd3f8TN6QZS39WCeddl7YqP1TdhkkQ',   // 首选 API 密钥
-    'AIzaSyB8YDU9wXTKvEKeGcTUJ0_c-zTWOLR-W-Q',   // 替换为第二个 API 密钥
-    'AIzaSyDQk7q3ofSUDpeNkg2FLOGktL_WxeohNQs',   // supply-API-1 
-    'AIzaSyAJOoTUHOhlhNtXopmj69DxxIgXDsKoU-I',   // supply-API-2
-    'AIzaSyCbAAVySCRK-hxRk6dcfFC6g28_mLd1IU0',   // supply-API-3
-    'AIzaSyCtXmUFNlgVBOXW8XPjrXe8u71kBH_AjUw',   // supply-API-4
-    'AIzaSyDqzmFAvomLLZGg1WWbpdhm7It26HsVh_Q',   // supply-API-5
-    // 你可以根据需要添加更多 API 密钥
+    'AIzaSyB8YDU9wXTKvEKeGcTUJ0_c-zTWOLR-W-Q',   
+    'AIzaSyDQk7q3ofSUDpeNkg2FLOGktL_WxeohNQs',   
+    'AIzaSyAJOoTUHOhlhNtXopmj69DxxIgXDsKoU-I',   
+    'AIzaSyCbAAVySCRK-hxRk6dcfFC6g28_mLd1IU0',   
+    'AIzaSyCtXmUFNlgVBOXW8XPjrXe8u71kBH_AjUw',  
+    'AIzaSyDqzmFAvomLLZGg1WWbpdhm7It26HsVh_Q'
 ];
 
 $categories = [];
 $apiKeyIndex = 0;
 
-function get_video_list($playlistId, $apiKey) {
-    $videoList = @file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=' . $maxResults . '&playlistId=' . $playlistId . '&key=' . $apiKey);
-    return json_decode($videoList, true);
-}
-
 foreach ($playlistIds as $playlistId) {
-    $served = false;
-    while (!$served && $apiKeyIndex < count($API_keys)) {
-        $apiKey = $API_keys[$apiKeyIndex];
-        $videoList = get_video_list($playlistId, $apiKey);
+    $apiKey = $API_keys[$apiKeyIndex];
+    $videoList = fetchWithRetry('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=' . $maxResults . '&playlistId=' . $playlistId . '&key=' . $apiKey);
 
-        if ($videoList && isset($videoList['items'])) {
-            $served = true;
-        } else {
+    // 如果 API 调用失败，尝试下一个 API 密钥
+    if (!$videoList || !isset($videoList['items'])) {
+        if ($apiKeyIndex < count($API_keys) - 1) {
             $apiKeyIndex++;
-            if ($apiKeyIndex >= count($API_keys)) {
-                $categories["未分类"][] = "#播放列表 " . $playlistId . " 未找到";
-                continue 2;  // 继续下一个播放列表
-            }
+            $apiKey = $API_keys[$apiKeyIndex];
+            $videoList = fetchWithRetry('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=' . $maxResults . '&playlistId=' . $playlistId . '&key=' . $apiKey);
+        } else {
+            $categories["未分类"][] = "#播放列表 " . $playlistId . " 未找到";
+            continue;
         }
     }
 
@@ -69,9 +61,8 @@ foreach ($playlistIds as $playlistId) {
         $videoTitle = $item['snippet']['title'];
         $channelId = $item['snippet']['channelId'];
 
-        $channelInfo = @file_get_contents('https://www.googleapis.com/youtube/v3/channels?part=snippet&id=' . $channelId . '&key=' . $apiKey);
-        $channelInfo = json_decode($channelInfo, true);
-
+        // 获取频道名称
+        $channelInfo = fetchWithRetry('https://www.googleapis.com/youtube/v3/channels?part=snippet&id=' . $channelId . '&key=' . $apiKey);
         $channelTitle = isset($channelInfo['items'][0]['snippet']['title']) ? $channelInfo['items'][0]['snippet']['title'] : '未知频道';
 
         $command = "/home/runner/.local/bin/yt-dlp -f best --get-url --no-playlist --no-warnings --force-generic-extractor --user-agent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0' --youtube-skip-dash-manifest " . escapeshellarg($youtubeUrl);
@@ -80,7 +71,7 @@ foreach ($playlistIds as $playlistId) {
         if ($streamUrl !== null && strpos($streamUrl, 'http') === 0) {
             $streamUrl = trim($streamUrl);
         } else {
-            $streamUrl = $youtubeUrl;
+            $streamUrl = $youtubeUrl;  // 使用原始URL
         }
 
         if (!isset($categories[$channelTitle])) {
@@ -102,4 +93,17 @@ foreach ($categories as $category => $videos) {
 }
 
 fclose($file);
+
+function fetchWithRetry($url, $maxRetries = 5, $delay = 2) {
+    $retryCount = 0;
+    while ($retryCount < $maxRetries) {
+        $response = file_get_contents($url);
+        if ($response !== false) {
+            return json_decode($response, true);
+        }
+        sleep($delay);  // 等待一段时间后重试
+        $retryCount++;
+    }
+    return null;
+}
 ?>
