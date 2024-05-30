@@ -122,3 +122,10 @@ foreach ($categories as $category => $videos) {
         foreach ($videos as $video) {
             fwrite($file, $video);
         }
+    }
+}
+
+fclose($file);
+
+file_put_contents($log, "End Execution\n", FILE_APPEND);
+?>
