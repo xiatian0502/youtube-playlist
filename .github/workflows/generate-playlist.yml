@@ -1,16 +1,9 @@
-name: Generate YouTube Playlist
-
-on:
-  schedule:
-    - cron: '0 0 * * *'  # 每天UTC时间0点运行一次
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-
 jobs:
   generate-playlist:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write  # 添加此行，确保拥有对内容的写权限
 
     steps:
       - name: Checkout repository content
@@ -19,7 +12,7 @@ jobs:
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '7.4'  # 设置PHP版本，根据你的需求调整
+          php-version: '7.4'
 
       - name: Install yt-dlp and ffmpeg
         run: |
@@ -42,7 +35,6 @@ jobs:
         run: cat playlist.m3u || echo 'playlist.m3u 不存在'
 
       - name: Commit and push changes
-        if: success()
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
