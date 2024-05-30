@@ -94,6 +94,11 @@ foreach ($playlistIds as $playlistId) {
         // 记录yt-dlp命令和输出
         file_put_contents($log, "yt-dlp Command: $command\nOutput: $streamUrl\n", FILE_APPEND);
 
+        // 处理不支持的URL和错误情况
+        if (strpos($streamUrl, 'ERROR') !== false || !$streamUrl) {
+            continue; // 跳过这些错误的视频继续下一个
+        }
+
         if ($streamUrl !== null && strpos($streamUrl, 'http') === 0) {
             $streamUrl = trim($streamUrl);
         } else {
@@ -121,4 +126,3 @@ foreach ($categories as $category => $videos) {
 fclose($file);
 
 file_put_contents($log, "End Execution\n", FILE_APPEND);
-?>
