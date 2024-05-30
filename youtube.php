@@ -30,11 +30,12 @@ $playlistIds = [
 $maxResults = 30;
 $API_keys = [
     'AIzaSyAONZd3f8TN6QZS39WCeddl7YqP1TdhkkQ',   // 首选 API 密钥
-    'AIzaSyA2WlZZiiOBXsYS5_YldErN3ZqoWtLe3-w',   // 替换为第二个 API 密钥
-    'AIzaSyAz9FWDUjDZp9lNRj-uDi3xvYyFSn-EI9M',   // 替换为第二个 API 密钥
-    'AIzaSyD6QsrG7vTttcpaktIWr7CyPJYRDsUJN6U',   // 替换为第二个 API 密钥
-    'AIzaSyB4cNp3RrHH81bfX_WxIith3jF8RPHOvyc',   // 替换为第二个 API 密钥
-    'AIzaSyAtdWeFxtIT6jyxksh81FNpCSNjyTLlXWM',   // 替换为第二个 API 密钥
+    'AIzaSyB8YDU9wXTKvEKeGcTUJ0_c-zTWOLR-W-Q',   // 替换为第二个 API 密钥
+    'AIzaSyDQk7q3ofSUDpeNkg2FLOGktL_WxeohNQs',   // supply-API-1 
+    'AIzaSyAJOoTUHOhlhNtXopmj69DxxIgXDsKoU-I',   // supply-API-2
+    'AIzaSyCbAAVySCRK-hxRk6dcfFC6g28_mLd1IU0',   // supply-API-3
+    'AIzaSyCtXmUFNlgVBOXW8XPjrXe8u71kBH_AjUw',   // supply-API-4
+    'AIzaSyDqzmFAvomLLZGg1WWbpdhm7It26HsVh_Q',   // supply-API-5
     // 你可以根据需要添加更多 API 密钥
 ];
 
