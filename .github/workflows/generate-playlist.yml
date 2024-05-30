@@ -1,4 +1,4 @@
-    name: Generate YouTube Playlist
+name: Generate YouTube Playlist
 
 on:
   schedule:
