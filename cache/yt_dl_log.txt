@@ -1,44 +1,35 @@
 yt-dlp version: 2024.05.27
 
-ERROR: [youtube] gUnqHaTFPOI: Premieres in 28 days
+ERROR: [youtube] gUnqHaTFPOI: Premieres in 27 days
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=gUnqHaTFPOI 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
-ERROR: [youtube] gUnqHaTFPOI: Premieres in 28 days
+ERROR: [youtube] gUnqHaTFPOI: Premieres in 27 days
 2160P Command: yt-dlp -f 'bestvideo[height=2160]+bestaudio/best' --get-url https://www.youtube.com/watch?v=gUnqHaTFPOI 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 2160P Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
          If you know what you are doing and want only the best pre-merged format, use "-f b" instead to suppress this warning
-ERROR: [youtube] gUnqHaTFPOI: Premieres in 28 days
+ERROR: [youtube] gUnqHaTFPOI: Premieres in 27 days
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=gUnqHaTFPOI 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=gUnqHaTFPOI
-ERROR: [youtube] ZvTw1FIuL0I: Premieres in 7 days
+ERROR: [youtube] ZvTw1FIuL0I: Premieres in 6 days
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=ZvTw1FIuL0I 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
-ERROR: [youtube] ZvTw1FIuL0I: Premieres in 7 days
+ERROR: [youtube] ZvTw1FIuL0I: Premieres in 6 days
 2160P Command: yt-dlp -f 'bestvideo[height=2160]+bestaudio/best' --get-url https://www.youtube.com/watch?v=ZvTw1FIuL0I 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 2160P Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
          If you know what you are doing and want only the best pre-merged format, use "-f b" instead to suppress this warning
-ERROR: [youtube] ZvTw1FIuL0I: Premieres in 7 days
+ERROR: [youtube] ZvTw1FIuL0I: Premieres in 6 days
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=ZvTw1FIuL0I 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=ZvTw1FIuL0I
-ERROR: [youtube] 6LvVMRQvAeY: Premieres in 14 minutes
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=6LvVMRQvAeY 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
-Result: 
-ERROR: [youtube] 6LvVMRQvAeY: Premieres in 14 minutes
-2160P Command: yt-dlp -f 'bestvideo[height=2160]+bestaudio/best' --get-url https://www.youtube.com/watch?v=6LvVMRQvAeY 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
-2160P Result: 
-WARNING: "-f best" selects the best pre-merged format which is often not the best option.
-         To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
-         If you know what you are doing and want only the best pre-merged format, use "-f b" instead to suppress this warning
-ERROR: [youtube] 6LvVMRQvAeY: Premieres in 14 minutes
-Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=6LvVMRQvAeY 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
-Fallback Result: 
-Failed to retrieve stream URL for https://www.youtube.com/watch?v=6LvVMRQvAeY
+Result: https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1717179297/ei/Qb9ZZvfuGObssfIPit-guA4/ip/13.91.180.80/id/6LvVMRQvAeY.0/itag/270/source/yt_premiere_broadcast/requiressl/yes/ratebypass/yes/live/1/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-n4v7snee.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/3600/manifest_duration/3600/vprv/1/playlist_type/DVR/mh/YT/mm/44/mn/sn-n4v7snee/ms/lva/mv/u/mvi/2/pl/22/dover/13/pacing/0/short_key/1/keepalive/yes/mt/1717155512/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJfQdSswRQIhAJjifFxfCl8P07QpYyMzx5cppbbilCCMJc8DoeIbM_NfAiBs9_roncBwAtU8NWzh5tM79oGtyzVTKlbmWu6V0IWwMA%3D%3D/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pl/lsig/AHlkHjAwRgIhALJ00PDRTK2buXkJT0bXMwHYm-9t-wV3IEYAY_jIYCTCAiEA1vwDHtl7zJer0vhdALDRsrzIXDzH5WoOoFzDn2mSIPE%3D/playlist/index.m3u8
+https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1717179297/ei/Qb9ZZvfuGObssfIPit-guA4/ip/13.91.180.80/id/6LvVMRQvAeY.0/itag/234/source/yt_premiere_broadcast/requiressl/yes/ratebypass/yes/live/1/goi/133/sgoap/gir%3Dyes%3Bitag%3D140/rqh/1/hdlc/1/hls_chunk_host/rr2---sn-n4v7snee.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/3600/manifest_duration/3600/vprv/1/playlist_type/DVR/mh/YT/mm/44/mn/sn-n4v7snee/ms/lva/mv/u/mvi/2/pl/22/dover/13/pacing/0/short_key/1/keepalive/yes/mt/1717155512/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,goi,sgoap,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJfQdSswRQIhALTdy7MXRXO7rkigLp3h9tcssBJsEtPnb1_UVS_NF__-AiAGLrNsmZ7iCsGcdXK0OxISMQ27oDUvJfSes4BD6RnrJw%3D%3D/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pl/lsig/AHlkHjAwRAIgTwL0S9K6rOXQLgVElTXzIqyaAZGkDkBEPSnYc2e_whQCIBbratL0V4FspsqzWoGmr8SpDUVfmzJCRYZ1ihw0IstT/playlist/index.m3u8
+
 ERROR: [youtube] Dy-W43Cm53s: Private video. Sign in if you've been granted access to this video
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=Dy-W43Cm53s 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
@@ -83,7 +74,6 @@ WARNING: [youtube] Incomplete data received in embedded initial data; re-fetchin
 WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
 WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
 WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
-WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
 ERROR: [youtube] _10q6AvlCBk: Private video. Sign in if you've been granted access to this video
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=_10q6AvlCBk 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
@@ -123,8 +113,6 @@ ERROR: [youtube] 8n1nMPC9w_E: Private video. Sign in if you've been granted acce
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=8n1nMPC9w_E 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=8n1nMPC9w_E
-WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
-WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
 ERROR: [youtube] Jtj0zORq4Dw: Private video. Sign in if you've been granted access to this video
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=Jtj0zORq4Dw 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
@@ -216,10 +204,6 @@ ERROR: [youtube] gCrFUMGk-JM: Video unavailable. This video has been removed by 
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=gCrFUMGk-JM 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=gCrFUMGk-JM
-Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=Cz3_jqx1vHo 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
-Result: https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1717178567/ei/Z7xZZozqFLfysfIP9_aHsAo/ip/52.159.140.180/id/Cz3_jqx1vHo.1/itag/270/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hdlc/1/hls_chunk_host/rr4---sn-n4v7snll.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/3600/manifest_duration/3600/vprv/1/playlist_type/DVR/mh/xm/mm/44/mn/sn-n4v7snll/ms/lva/mv/u/mvi/4/pl/22/dover/13/pacing/0/short_key/1/keepalive/yes/mt/1717155512/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgovp,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJfQdSswRQIhANLnHY0NSAt0p1SZ8N1Rn7wYA47WF2sirYBqDbcMqr0iAiAp-GfNFEVi1YcFGexJ3FZoBMPRHiC_uhN2mbJurhaB5g%3D%3D/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pl/lsig/AHlkHjAwRAIgQogfGjd6UQjeoPr5OidfV-QUcDLr69dOo6f3Vp4XVyICIDvhpXC-GEZv0Y6YW_6bbV6KSOJRTNxzTOfPOP-hv2R0/playlist/index.m3u8
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1717178567/ei/Z7xZZozqFLfysfIP9_aHsAo/ip/52.159.140.180/id/Cz3_jqx1vHo.1/itag/234/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/goi/133/sgoap/gir%3Dyes%3Bitag%3D140/rqh/1/hdlc/1/hls_chunk_host/rr4---sn-n4v7snll.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/3600/manifest_duration/3600/vprv/1/playlist_type/DVR/mh/xm/mm/44/mn/sn-n4v7snll/ms/lva/mv/u/mvi/4/pl/22/dover/13/pacing/0/short_key/1/keepalive/yes/mt/1717155512/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,goi,sgoap,rqh,hdlc,xpc,playlist_duration,manifest_duration,vprv,playlist_type/sig/AJfQdSswRQIhAO40WK1lqyUAMuQcGxAZ4CUm9EEMwNWRB69u5INxS7BOAiA0kxNBbWsfnUr9zLKxZ3mdSCeWJhcadmVzpsJt0FyKeA%3D%3D/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pl/lsig/AHlkHjAwRQIgDTdpaYxe202KmymFFd_nMsEt-XCDHo5cMr_xY9szt5ICIQDRw7fVQCOqx0uUhiiin_6diWTbS8wxmqeBsVtOPu5YmA%3D%3D/playlist/index.m3u8
-
 ERROR: [youtube] vEk750p39aE: Private video. Sign in if you've been granted access to this video
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=vEk750p39aE 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
@@ -233,7 +217,6 @@ ERROR: [youtube] vEk750p39aE: Private video. Sign in if you've been granted acce
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=vEk750p39aE 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=vEk750p39aE
-WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
 ERROR: [youtube] w0M6kzGquz8: Private video. Sign in if you've been granted access to this video
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=w0M6kzGquz8 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
