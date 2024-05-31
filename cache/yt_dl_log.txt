@@ -1,7 +1,6 @@
 yt-dlp version: 2024.05.27
 
 WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
-WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
 ERROR: [youtube] gUnqHaTFPOI: Premieres in 28 days
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=gUnqHaTFPOI 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
@@ -28,16 +27,16 @@ ERROR: [youtube] ZvTw1FIuL0I: Premieres in 7 days
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=ZvTw1FIuL0I 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=ZvTw1FIuL0I
-ERROR: [youtube] 6LvVMRQvAeY: Premieres in 86 minutes
+ERROR: [youtube] 6LvVMRQvAeY: Premieres in 44 minutes
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=6LvVMRQvAeY 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
-ERROR: [youtube] 6LvVMRQvAeY: Premieres in 86 minutes
+ERROR: [youtube] 6LvVMRQvAeY: Premieres in 44 minutes
 2160P Command: yt-dlp -f 'bestvideo[height=2160]+bestaudio/best' --get-url https://www.youtube.com/watch?v=6LvVMRQvAeY 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 2160P Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
          If you know what you are doing and want only the best pre-merged format, use "-f b" instead to suppress this warning
-ERROR: [youtube] 6LvVMRQvAeY: Premieres in 86 minutes
+ERROR: [youtube] 6LvVMRQvAeY: Premieres in 44 minutes
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=6LvVMRQvAeY 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=6LvVMRQvAeY
@@ -81,11 +80,6 @@ ERROR: [youtube] LjhzGe8a_Ys: Video unavailable. This video is no longer availab
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=LjhzGe8a_Ys 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=LjhzGe8a_Ys
-WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
-WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
-WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
-WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
-WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
 ERROR: [youtube] _10q6AvlCBk: Private video. Sign in if you've been granted access to this video
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=_10q6AvlCBk 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
@@ -151,6 +145,7 @@ ERROR: [youtube] kf0S55a0neY: Private video. Sign in if you've been granted acce
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=kf0S55a0neY 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=kf0S55a0neY
+WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
 ERROR: [youtube] BjIftYQW3-I: Private video. Sign in if you've been granted access to this video
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=BjIftYQW3-I 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
@@ -216,16 +211,16 @@ ERROR: [youtube] gCrFUMGk-JM: Video unavailable. This video has been removed by 
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=gCrFUMGk-JM 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=gCrFUMGk-JM
-ERROR: [youtube] Cz3_jqx1vHo: This live event will begin in 70 minutes.
+ERROR: [youtube] Cz3_jqx1vHo: This live event will begin in 28 minutes.
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=Cz3_jqx1vHo 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
-ERROR: [youtube] Cz3_jqx1vHo: This live event will begin in 70 minutes.
+ERROR: [youtube] Cz3_jqx1vHo: This live event will begin in 28 minutes.
 2160P Command: yt-dlp -f 'bestvideo[height=2160]+bestaudio/best' --get-url https://www.youtube.com/watch?v=Cz3_jqx1vHo 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 2160P Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
          If you know what you are doing and want only the best pre-merged format, use "-f b" instead to suppress this warning
-ERROR: [youtube] Cz3_jqx1vHo: This live event will begin in 70 minutes.
+ERROR: [youtube] Cz3_jqx1vHo: This live event will begin in 28 minutes.
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=Cz3_jqx1vHo 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=Cz3_jqx1vHo
@@ -242,7 +237,6 @@ ERROR: [youtube] vEk750p39aE: Private video. Sign in if you've been granted acce
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=vEk750p39aE 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=vEk750p39aE
-WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
 ERROR: [youtube] w0M6kzGquz8: Private video. Sign in if you've been granted access to this video
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=w0M6kzGquz8 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
@@ -256,6 +250,7 @@ ERROR: [youtube] w0M6kzGquz8: Private video. Sign in if you've been granted acce
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=w0M6kzGquz8 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=w0M6kzGquz8
+WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
 ERROR: [youtube] zZkjncQ0b5Q: Private video. Sign in if you've been granted access to this video
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=zZkjncQ0b5Q 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
@@ -282,4 +277,3 @@ ERROR: [youtube] zqUNd2ij5-o: Private video. Sign in if you've been granted acce
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=zqUNd2ij5-o 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=zqUNd2ij5-o
-WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
