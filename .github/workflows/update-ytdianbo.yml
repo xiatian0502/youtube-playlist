@@ -24,10 +24,17 @@ jobs:
       - name: Run youtube.php
         run: php youtube.php > ytdianbo.m3u
 
-      - name: Commit and push changes
+      - name: Configure git
         run: |
           git config --global user.email "you@example.com"
           git config --global user.name "Your Name"
+        
+      - name: Add and commit changes
+        run: |
           git add ytdianbo.m3u cache/*
-          git commit -m "Update ytdianbo.m3u"
-          git push
+          git diff-index --quiet HEAD || git commit -m "Update ytdianbo.m3u"
+        
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
