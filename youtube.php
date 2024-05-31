@@ -26,6 +26,10 @@ if ($ytDlpPath) {
     exit(1);
 }
 
+$logEntry = function($message) use ($logFile) {
+    file_put_contents($logFile, $message . "\n", FILE_APPEND);
+};
+
 $m3uFileContent = "#EXTM3U\n";
 
 foreach ($playlistIds as $playlistId) {
@@ -35,19 +39,22 @@ foreach ($playlistIds as $playlistId) {
     // 如果缓存文件有效且存在，直接读取缓存
     if (file_exists($cacheFile) && (time() - filemtime($cacheFile)) < ($cacheTimeInMinutes * 60)) {
         $output = file_get_contents($cacheFile);
+        $logEntry("Using cached playlist data for $playlistUrl");
     } else {
         // 获取播放列表信息并缓存
         $command = "yt-dlp -J --flat-playlist --playlist-end $maxResults $playlistUrl 2>> $logFile";
         $output = shell_exec($command);
         if ($output) {
             file_put_contents($cacheFile, $output);
+            $logEntry("Fetched playlist data for $playlistUrl");
         } else {
-            file_put_contents($logFile, "Failed to fetch playlist data for $playlistUrl\n", FILE_APPEND);
+            $logEntry("Failed to fetch playlist data for $playlistUrl");
             continue;
         }
     }
 
     $data = json_decode($output, true);
+    $logEntry("Parsed playlist data: " . json_encode($data));
 
     if (is_array($data) && isset($data['entries'])) {
         foreach ($data['entries'] as $entry) {
@@ -58,36 +65,36 @@ foreach ($playlistIds as $playlistId) {
             // 如果视频缓存文件有效且存在，直接读取缓存
             if (file_exists($videoCacheFile) && (time() - filemtime($videoCacheFile)) < ($cacheTimeInMinutes * 60)) {
                 $streamUrl = trim(file_get_contents($videoCacheFile));
+                $logEntry("Using cached stream URL for $videoUrl");
             } else {
                 // 优先获取1920x1080P的视频流 URL，如果不可用则获取最高可用格式
                 $command = "yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url $videoUrl 2>> $logFile";
                 $streamUrl = shell_exec($command);
-
-                // 记录调试信息
-                file_put_contents($logFile, "Command: $command \nResult: $streamUrl\n", FILE_APPEND);
+                $logEntry("Command: $command \nResult: $streamUrl");
 
                 if (!$streamUrl) {
                     // 尝试获取最高可用格式的视频流 URL
                     $command = "yt-dlp -f 'best' --get-url $videoUrl 2>> $logFile";
                     $streamUrl = trim(shell_exec($command));
-
-                    // 记录调试信息
-                    file_put_contents($logFile, "Fallback Command: $command \nFallback Result: $streamUrl\n", FILE_APPEND);
+                    $logEntry("Fallback Command: $command \nFallback Result: $streamUrl");
                 } else {
                     $streamUrl = trim($streamUrl);
                 }
 
                 if ($streamUrl) {
                     file_put_contents($videoCacheFile, $streamUrl);
+                    $logEntry("Fetched stream URL for $videoUrl");
                 } else {
-                    file_put_contents($logFile, "Failed to retrieve stream URL for $videoUrl\n", FILE_APPEND);
+                    $logEntry("Failed to retrieve stream URL for $videoUrl");
                     continue;
                 }
             }
 
             if ($streamUrl) {
+                $logEntry("Stream URL: $streamUrl");
                 $videoData = shell_exec("yt-dlp -J $videoUrl 2>> $logFile");
                 $videoData = json_decode($videoData, true);
+                $logEntry("Video Data: " . json_encode($videoData));
                 if (isset($videoData['title']) && isset($videoData['uploader'])) {
                     $groupTitle = htmlspecialchars($videoData['uploader'], ENT_QUOTES, 'UTF-8');
                     $videoTitle = htmlspecialchars($videoData['title'], ENT_QUOTES, 'UTF-8');
@@ -96,11 +103,13 @@ foreach ($playlistIds as $playlistId) {
                     $m3uFileContent .= "$streamUrl\n";
                 }
             } else {
+                $logEntry("No stream URL found for $videoUrl");
                 $m3uFileContent .= "#EXTINF:-1,Failed to retrieve stream URL for $videoUrl\n";
                 $m3uFileContent .= "https://www.example.com/empty.m3u8\n";
             }
         }
     } else {
+        $logEntry("No videos found for playlist $playlistUrl");
         $m3uFileContent .= "#EXTINF:-1,No videos found for playlist $playlistUrl\n";
         $m3uFileContent .= "https://www.example.com/empty.m3u8\n";
     }
@@ -108,4 +117,4 @@ foreach ($playlistIds as $playlistId) {
 
 $m3uFilePath = __DIR__ . '/ytdianbo.m3u';
 file_put_contents($m3uFilePath, $m3uFileContent);
-file_put_contents($logFile, "M3U file has been created successfully: $m3uFilePath\n", FILE_APPEND);
+$logEntry("M3U file has been created successfully: $m3uFilePath\n");
