@@ -13,11 +13,11 @@ $playlistIds = [
     'PLg4glStCiHhrb425xNCsu2pfBJvpvBVok', // Links TV
     'PLg4glStCiHhrICchD-I3W0z7FS7LEayu2', // Links TV
     'PLk3vQVLQ1uijSRpwOspimMhNAiT0qHUka', // 錫蘭Ceylan
-    'PLiMeZxaUvGEIAtFAG0PJF8k09zMpnTaQv', // 主播私享
-    'PLiMeZxaUvGEIZLpgh_9uZnDpSGp6Hg_61', // 主播私享
-    'PLiMeZxaUvGEJtAuzQMQxjSWJ6ueyEfTi4', // 主播私享
-    'PLiMeZxaUvGEKRMoNvlvuowilo93bbCHvh', // 主播私享
-    'PLiMeZxaUvGEJtxtAyQVfkv_7QE9ttMNrz', // 主播私享
+    'PLpXA7u6Y4dGeBwrabbPCRYyGPJp-ysVmw', // 德云社
+    'PLh9lJwqeOuvN3Thq2TaIOwJvyQniZt9l0', // 新闻大白话字幕
+    'PLXDl0OrlJGsh7UhLSyKQdL1RZcMMbaJxL', // 最美的公路1-2 南迴公路濱海段4K全紀錄(台東達仁-知本)
+    'PLcQH5CCDoZ4-YPhda-aGyzaaWvMFsLooH', // 德云小分队
+    'PLcQH5CCDoZ48NOddEhDQtajOeQqvdadoJ', // 岳云鹏孙越经典爆笑相声合集
     'PLPEKV0iMwYZLOkTmYFYxNzQnOo7aYzNiT', // 老戴在此
     'PLPEKV0iMwYZIJEmmKz7MQKEaZyfPlyDHH', // 老戴在此
     'PLPEKV0iMwYZLxCV3CxQWEZaMZr6QuTsgw', // 老戴在此
@@ -32,7 +32,7 @@ $playlistIds = [
     'PLvHT0yeWYIuAj5owXnEm0kbext46i8CJi', // 全球大视野
     'PLD0nIS14ohhcGG2fhGyvr8y6qhGQqwYGL', // 头条开讲
     'PL0z1ZjXYEnlohS5MIDibsc1D8seHMwsXi', // 黑男邱比特
-    // 添加更多播放列表 ID
+    // 添加更多播放列表 ID，根据需要添加
 ];
 
 $maxResults = 20;
@@ -88,7 +88,7 @@ foreach ($playlistIds as $playlistId) {
             if (file_exists($videoCacheFile) && (time() - filemtime($videoCacheFile)) < ($cacheTimeInMinutes * 60)) {
                 $streamUrl = trim(file_get_contents($videoCacheFile));
             } else {
-                // 优先获取1920x1080P的视频流 URL，如果不可用则获取最高可用格式
+                // 优先获取1920x1080P的视频流 URL，如果不可用则获取2160P的视频流 URL
                 $command = "yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url $videoUrl 2>> $logFile";
                 $streamUrl = shell_exec($command);
 
@@ -96,12 +96,23 @@ foreach ($playlistIds as $playlistId) {
                 file_put_contents($logFile, "Command: $command \nResult: $streamUrl\n", FILE_APPEND);
 
                 if (!$streamUrl) {
-                    // 尝试获取最高可用格式的视频流 URL
-                    $command = "yt-dlp -f 'best' --get-url $videoUrl 2>> $logFile";
-                    $streamUrl = trim(shell_exec($command));
+                    // 尝试获取2160P的视频流 URL
+                    $command = "yt-dlp -f 'bestvideo[height=2160]+bestaudio/best' --get-url $videoUrl 2>> $logFile";
+                    $streamUrl = shell_exec($command);
 
                     // 记录调试信息
-                    file_put_contents($logFile, "Fallback Command: $command \nFallback Result: $streamUrl\n", FILE_APPEND);
+                    file_put_contents($logFile, "2160P Command: $command \n2160P Result: $streamUrl\n", FILE_APPEND);
+
+                    if (!$streamUrl) {
+                        // 尝试获取最高可用格式的视频流 URL
+                        $command = "yt-dlp -f 'best' --get-url $videoUrl 2>> $logFile";
+                        $streamUrl = trim(shell_exec($command));
+
+                        // 记录调试信息
+                        file_put_contents($logFile, "Fallback Command: $command \nFallback Result: $streamUrl\n", FILE_APPEND);
+                    } else {
+                        $streamUrl = trim($streamUrl);
+                    }
                 } else {
                     $streamUrl = trim($streamUrl);
                 }
