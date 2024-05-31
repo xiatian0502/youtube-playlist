@@ -2,12 +2,12 @@
 $playlistIds = [
     'PLMUs_BF93V5ZSwXgrcGre0aGngSyOfv7x', // 你的第一个播放列表 ID
     'PLwACruPGUorXHJa2kX5Olh-YbKAb3rm-q', // 你的第二个播放列表 ID
-    // 添加更多播放列表ID
+    // 添加更多播放列表 ID
 ];
 
 $maxResults = 20;
 $cacheTimeInMinutes = 1440; // 缓存时间设置为1天（1440分钟）
-$cacheDir = DIR . '/cache'; // 缓存目录
+$cacheDir = __DIR__ . '/cache'; // 缓存目录
 
 if (!is_dir($cacheDir)) {
     mkdir($cacheDir, 0755, true); // 创建缓存目录
@@ -18,11 +18,15 @@ $logFile = '/var/www/html/yt_dl_log.txt'; // 指定一个日志文件
 // 清空日志文件
 file_put_contents($logFile, "");
 
+// 检查 yt-dlp 版本
+$ytDlpVersion = shell_exec("/usr/local/bin/yt-dlp --version");
+file_put_contents($logFile, "yt-dlp version: $ytDlpVersion\n", FILE_APPEND);
+
 header('Content-Type: application/x-mpegURL');
 header('Content-Disposition: attachment; filename="playlist.m3u"');
 echo "#EXTM3U\n";
 
-foreach ($playlistIds as $index => $playlistId) {
+foreach ($playlistIds as $playlistId) {
     $playlistUrl = "https://www.youtube.com/playlist?list=$playlistId";
     $cacheFile = $cacheDir . '/' . sha1($playlistId) . '.json';
 
@@ -54,11 +58,21 @@ foreach ($playlistIds as $index => $playlistId) {
                 $streamUrl = trim(file_get_contents($videoCacheFile));
             } else {
                 // 优先获取1920x1080P的视频流 URL，如果不可用则获取最高可用格式
-                $streamUrl = trim(shell_exec("/usr/local/bin/yt-dlp -f 'bestvideo[width=1920][height=1080]+bestaudio/best' --get-url $videoUrl 2>> $logFile"));
+                $command = "/usr/local/bin/yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url $videoUrl 2>> $logFile";
+                $streamUrl = shell_exec($command);
+
+                // 记录调试信息
+                file_put_contents($logFile, "Command: $command \nResult: $streamUrl\n", FILE_APPEND);
 
                 if (!$streamUrl) {
                     // 尝试获取最高可用格式的视频流 URL
-                    $streamUrl = trim(shell_exec("/usr/local/bin/yt-dlp -f 'best' --get-url $videoUrl 2>> $logFile"));
+                    $command = "/usr/local/bin/yt-dlp -f 'best' --get-url $videoUrl 2>> $logFile";
+                    $streamUrl = trim(shell_exec($command));
+
+                    // 记录调试信息
+                    file_put_contents($logFile, "Fallback Command: $command \nFallback Result: $streamUrl\n", FILE_APPEND);
+                } else {
+                    $streamUrl = trim($streamUrl);
                 }
 
                 if ($streamUrl) {
@@ -70,7 +84,8 @@ foreach ($playlistIds as $index => $playlistId) {
             }
 
             if ($streamUrl) {
-                $videoData = json_decode(shell_exec("/usr/local/bin/yt-dlp -J $videoUrl 2>> $logFile"), true);
+                $videoData = shell_exec("/usr/local/bin/yt-dlp -J $videoUrl 2>> $logFile");
+                $videoData = json_decode($videoData, true);
                 if (isset($videoData['title']) && isset($videoData['uploader'])) {
                     $groupTitle = htmlspecialchars($videoData['uploader'], ENT_QUOTES, 'UTF-8');
                     $videoTitle = htmlspecialchars($videoData['title'], ENT_QUOTES, 'UTF-8');
@@ -80,12 +95,12 @@ foreach ($playlistIds as $index => $playlistId) {
                 }
             } else {
                 echo "#EXTINF:-1,Failed to retrieve stream URL for $videoUrl\n";
-                echo "https://www.example.com/empty\n";
+                echo "https://www.example.com/empty.m3u8\n";
             }
         }
     } else {
         echo "#EXTINF:-1,No videos found for playlist $playlistUrl\n";
-        echo "https://www.example.com/empty\n";
+        echo "https://www.example.com/empty.m3u8\n";
     }
 }
 ?>
