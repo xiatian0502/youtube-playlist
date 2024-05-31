@@ -1,35 +1,33 @@
-name: Update Ytdianbo M3U File
+name: Update YouTube Playlist M3U
 
 on:
   schedule:
-    - cron: '0 0 */10 * *' # 每10天运行一次
-  workflow_dispatch:
+    - cron: '0 0 */10 * *' # 每隔10天运行一次
+  workflow_dispatch: # 允许手动触发工作流
 
 jobs:
   update-m3u:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: Checkout repository content
+      - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 'latest'
+          php-version: '8.0' # 你可以根据需要调整 PHP 版本
 
       - name: Install yt-dlp
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y yt-dlp
+        run: sudo apt-get update && sudo apt-get install -y yt-dlp
 
       - name: Run youtube.php
-        run: php ./youtube.php
+        run: php youtube.php > ytdianbo.m3u
 
-      - name: Commit and push changes
+      - name: Save ytdianbo.m3u
         run: |
-          git config --global user.name 'github-actions'
-          git config --global user.email 'github-actions@github.com'
-          git add ytdianbo.m3u yt_dl_log.txt
-          git commit -m "Update ytdianbo.m3u file"
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
+          git add ytdianbo.m3u
+          git commit -m "Update ytdianbo.m3u"
           git push
