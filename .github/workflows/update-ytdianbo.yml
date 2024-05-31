@@ -22,16 +22,27 @@ jobs:
           php-version: '8.0' # 你可以根据需要调整 PHP 版本
 
       - name: Install yt-dlp
-        run: sudo apt-get update && sudo apt-get install -y yt-dlp
+        run: |
+          sudo apt-get update 
+          sudo apt-get install -y yt-dlp 
+          python3 -m pip install --upgrade yt-dlp
 
       - name: Run youtube.php
         run: |
           php youtube.php > ytdianbo.m3u 
           # 输出日志以及生成的 m3u 文件内容
           echo "内容: ytdianbo.m3u"
-          cat ytdianbo.m3u
+          if [ -f ytdianbo.m3u ]; then
+              cat ytdianbo.m3u
+          else
+              echo "ytdianbo.m3u 文件未生成"
+          fi
           echo "日志: cache/yt_dl_log.txt"
-          cat cache/yt_dl_log.txt
+          if [ -f cache/yt_dl_log.txt ]; then
+              cat cache/yt_dl_log.txt
+          else
+              echo "cache/yt_dl_log.txt 文件未生成"
+          fi
 
       - name: Configure git
         run: |
