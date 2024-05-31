@@ -1,5 +1,36 @@
 <?php
 $playlistIds = [
+    'PLMUs_BF93V5ZSwXgrcGre0aGngSyOfv7x', // 你的第一个播放列表 ID
+    'PLwACruPGUorXHJa2kX5Olh-YbKAb3rm-q', // 你的第二个播放列表 ID
+    'PL0VLshn35eZIQ8eIvFcj0TiuiiVl08Jvf', // 國外聲樂老師超真實銳評
+    'PLrVKx-I9kvCRAVwkSfzjq_eZ66f89sz_h', // 老雷
+    'PLrVKx-I9kvCQ4gkJ-IGhhh2yZq38FobF8', // 老雷
+    'PLrVKx-I9kvCTNaiwtXI3_VujjhZRYxAlM', // 老雷
+    'PLrVKx-I9kvCTT2yZaZP32LcNkza2NjrEg', // 老雷
+    'PLrVKx-I9kvCTibDObcPz6BiUwtcv66jzM', // 老雷
+    'PLrVKx-I9kvCQTawi_6WuX5y-kz0Xx2iC9', // 老雷
+    'PLrVKx-I9kvCRspO_5dqtZjYWmHsCMxYWV', // 老雷
+    'PLg4glStCiHhrb425xNCsu2pfBJvpvBVok', // Links TV
+    'PLg4glStCiHhrICchD-I3W0z7FS7LEayu2', // Links TV
+    'PLk3vQVLQ1uijSRpwOspimMhNAiT0qHUka', // 錫蘭Ceylan
+    'PLpXA7u6Y4dGeBwrabbPCRYyGPJp-ysVmw', // 德云社
+    'PLh9lJwqeOuvN3Thq2TaIOwJvyQniZt9l0', // 新闻大白话字幕
+    'PLcQH5CCDoZ4-YPhda-aGyzaaWvMFsLooH', // 德云小分队
+    'PLcQH5CCDoZ48NOddEhDQtajOeQqvdadoJ', // 岳云鹏孙越经典爆笑相声合集
+    'PLPEKV0iMwYZLOkTmYFYxNzQnOo7aYzNiT', // 老戴在此
+    'PLPEKV0iMwYZIJEmmKz7MQKEaZyfPlyDHH', // 老戴在此
+    'PLPEKV0iMwYZLxCV3CxQWEZaMZr6QuTsgw', // 老戴在此
+    'PLMUs_BF93V5aqfoGAI5Jh05yscmKegN0V', // 老高
+    'PLMUs_BF93V5YW4tbdZbBkcNsD3yU2shL0', // 老高
+    'PLOrDt87s8A3r4X6gzfA2wIwqmARLcYMXw', // 李永乐老师
+    'PLOrDt87s8A3oV_INolHOLEyD8Sp6XcMFa', // 李永乐老师
+    'PLOrDt87s8A3rTu_XAg7GZODkRA_FqoOm7', // 李永乐老师
+    'PLp7hnLHxd1KFM279kSSuitl1LZr-rk3O6', // 东森3宝
+    'PLp7hnLHxd1KEyrBXOq2y9QLGACMcttfZH', // 东森3宝
+    'PLp7hnLHxd1KGYED9S8tQmXfXTLE04euZV', // 东森3宝
+    'PLvHT0yeWYIuAj5owXnEm0kbext46i8CJi', // 全球大视野
+    'PLD0nIS14ohhcGG2fhGyvr8y6qhGQqwYGL', // 头条开讲
+    'PL0z1ZjXYEnlohS5MIDibsc1D8seHMwsXi', // 黑男邱比特
     'PLXDl0OrlJGsh7UhLSyKQdL1RZcMMbaJxL', // 最美的公路1-2 南迴公路濱海段4K全紀錄(台東達仁-知本)
     // 添加更多播放列表 ID，根据需要添加
 ];
