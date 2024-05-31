@@ -26,9 +26,7 @@ if ($ytDlpPath) {
     exit(1);
 }
 
-header('Content-Type: application/x-mpegURL');
-header('Content-Disposition: attachment; filename="playlist.m3u"');
-echo "#EXTM3U\n";
+$m3uFileContent = "#EXTM3U\n";
 
 foreach ($playlistIds as $playlistId) {
     $playlistUrl = "https://www.youtube.com/playlist?list=$playlistId";
@@ -94,17 +92,20 @@ foreach ($playlistIds as $playlistId) {
                     $groupTitle = htmlspecialchars($videoData['uploader'], ENT_QUOTES, 'UTF-8');
                     $videoTitle = htmlspecialchars($videoData['title'], ENT_QUOTES, 'UTF-8');
 
-                    echo "#EXTINF:-1 group-title=\"$groupTitle\",$videoTitle\n";
-                    echo "$streamUrl\n";
+                    $m3uFileContent .= "#EXTINF:-1 group-title=\"$groupTitle\",$videoTitle\n";
+                    $m3uFileContent .= "$streamUrl\n";
                 }
             } else {
-                echo "#EXTINF:-1,Failed to retrieve stream URL for $videoUrl\n";
-                echo "https://www.example.com/empty.m3u8\n";
+                $m3uFileContent .= "#EXTINF:-1,Failed to retrieve stream URL for $videoUrl\n";
+                $m3uFileContent .= "https://www.example.com/empty.m3u8\n";
             }
         }
     } else {
-        echo "#EXTINF:-1,No videos found for playlist $playlistUrl\n";
-        echo "https://www.example.com/empty.m3u8\n";
+        $m3uFileContent .= "#EXTINF:-1,No videos found for playlist $playlistUrl\n";
+        $m3uFileContent .= "https://www.example.com/empty.m3u8\n";
     }
 }
-?>
+
+$m3uFilePath = __DIR__ . '/ytdianbo.m3u';
+file_put_contents($m3uFilePath, $m3uFileContent);
+file_put_contents($logFile, "M3U file has been created successfully: $m3uFilePath\n", FILE_APPEND);
