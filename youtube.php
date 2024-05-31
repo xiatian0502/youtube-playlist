@@ -19,7 +19,7 @@ $playlistIds = [
     'PLPEKV0iMwYZLIRBs8xSm9du4MoInhywy1',    // 老戴在此
     'PLPEKV0iMwYZLUxFvziNn-q1lrLtyZKz_F',    // 老戴在此
     'PLOrDt87s8A3rMMqrz_Sz2kSt4lzWiPg4h',    // 李永乐老师
-    'PL0VLshn35eZIQ8eIvFcj0TiuiiVl08Jvf',    // 橘子老师国 外声乐老师超真实锐评
+    'PL0VLshn35eZIQ8eIvFcj0TiuiiVl08Jvf',    // 橘子老师国外声乐老师超真实锐评
     'PLk3vQVLQ1uijSRpwOspimMhNAiT0qHUka'     // 锡兰Ceylan
 ];
 
@@ -51,10 +51,10 @@ function makeRequest($url) {
         $fullUrl = $url . '&key=' . $API_key;
         $response = @file_get_contents($fullUrl);
 
-        if ($response === FALSE) {
-            usleep(500000); // 如果调用失败，等待 0.5 秒再重复
+        if ($response === FALSE || strpos($http_response_header[0], '429') !== false) {
+            usleep(500000); // 如果调用失败或 429 错误，等待 0.5 秒再重复
         }
-    } while ($response === FALSE);
+    } while ($response === FALSE || strpos($http_response_header[0], '429') !== false);
 
     return json_decode($response, true);
 }
@@ -87,7 +87,7 @@ foreach ($playlistIds as $playlistId) {
                 if ($streamUrl !== null && strpos($streamUrl, 'http') === 0) {
                     $streamUrl = trim($streamUrl);
                 } else {
-                    usleep(500000); // 如果调用失败，等待 0.5 秒再重复
+                    usleep(700000); // 如果调用失败，等待 0.5 秒再重复
                 }
             } while (!isset($streamUrl) || strpos($streamUrl, 'http') !== 0);
 
@@ -100,7 +100,7 @@ foreach ($playlistIds as $playlistId) {
         }
 
         // 延时以降低API调用频率，减少被限制的可能性
-        usleep(500000); // 500毫秒
+        usleep(700000); // 500 毫秒
     }
 }
 
