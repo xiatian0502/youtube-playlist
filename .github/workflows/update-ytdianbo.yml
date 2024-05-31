@@ -24,7 +24,7 @@ jobs:
       - name: Install yt-dlp
         run: |
           sudo apt-get update 
-          sudo apt-get install -y yt-dlp
+          sudo apt-get install -y yt-dlp 
           python3 -m pip install --upgrade yt-dlp
 
       - name: Run youtube.php
@@ -68,7 +68,7 @@ jobs:
         run: |
           # 验证是否内容正确
           echo "验证M3U文件内容:"
-          if [ -f ytdianbo.m3u]; then
+          if [ -f ytdianbo.m3u ]; then
               cat ytdianbo.m3u
           else
               echo "未找到ytdianbo.m3u 文件"
@@ -79,13 +79,15 @@ jobs:
         env:
           PUBLIC0PLAYLIST: ${{ secrets.PUBLIC0PLAYLIST }}
         run: |
-          git clone https://xiatian0502:${{ secrets.PUBLIC0PLAYLIST }}@github.com/xiatian0502/public-playlist.git /tmp/public-playlist
+          # 使用私人令牌克隆公共仓库
+          git clone https://xiatian0502:${{ secrets.YYYY }}@github.com/xiatian0502/public-playlist.git /tmp/public-playlist
           # 更新 public-playlist 仓库中的 ytdianbo.m3u 文件
+          cp ytdianbo.m3u /tmp/public-playlist/
           cd /tmp/public-playlist
-          cp /home/runner/work/youtube-playlist/youtube-playlist/ytdianbo.m3u /tmp/public-playlist/
           git config --global user.email "gxia7466@gmail.com"
           git config --global user.name "xiatian0502"
           git checkout update-mytvfree
           git add ytdianbo.m3u
           git commit -m "Update ytdianbo.m3u"
-          git push origin update-mytvfree
+          # 使用私人令牌推送更改
+          git push https://xiatian0502:${{ secrets.YYYY }}@github.com/xiatian0502/public-playlist.git update-mytvfree
