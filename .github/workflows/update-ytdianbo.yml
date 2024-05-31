@@ -8,9 +8,6 @@ on:
 jobs:
   update-m3u:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
 
     steps:
       - name: Checkout repository
@@ -45,56 +42,56 @@ jobs:
               echo "cache/yt_dl_log.txt 文件未生成"
           fi
 
-      - name: Configure git
+      - name: Configure git for main repo
         run: |
-          git config --global user.email "gxia7466@gmail.com"
-          git config --global user.name "xiatian0502"
+          git config --local user.email "gxia7466@gmail.com"
+          git config --local user.name "xiatian0502"
 
-      - name: Pull latest changes
-        run: |
-          git pull origin main
-
-      - name: Add and commit changes
+      - name: Commit and push changes if any to main repo
         run: |
           git add ytdianbo.m3u cache/*
-          # Check if there are any changes to commit
-          git diff-index --quiet HEAD || git commit -m "Update ytdianbo.m3u"
+          git commit -m "Automatic update" || echo "No changes to commit"
+          git pull origin main --rebase
+          git push origin main
 
-      - name: Push changes
+      - name: Clone target repo
         run: |
-          git push origin HEAD:main
+          git clone https://xiatian0502:${{ secrets.YYYY }}@github.com/xiatian0502/public-playlist.git
+          cd public-playlist
+          git checkout -b update-mytvfree || git checkout update-mytvfree
+          cp ../ytdianbo.m3u .
 
-      - name: Verify M3U File
+      - name: Configure git for target repo
+        working-directory: public-playlist
         run: |
-          # 验证是否内容正确
-          echo "验证M3U文件内容:"
-          if [ -f ytdianbo.m3u ]; then
-              cat ytdianbo.m3u
-          else
-              echo "未找到ytdianbo.m3u 文件"
-              exit 1
+          git config --local user.email "gxia7466@gmail.com"
+          git config --local user.name "xiatian0502"
+
+      - name: Stash uncommitted changes
+        working-directory: public-playlist
+        run: git stash || echo "Nothing to stash"
+
+      - name: Pull and rebase changes in target repo
+        working-directory: public-playlist
+        run: git pull origin update-mytvfree --rebase
+
+      - name: Apply stashed changes
+        working-directory: public-playlist
+        run: git stash pop || echo "Nothing to apply"
+
+      - name: Resolve conflicts if any
+        working-directory: public-playlist
+        run: |
+          if git ls-files -u | grep ytdianbo.m3u; then
+            git checkout --theirs ytdianbo.m3u
+            git add ytdianbo.m3u
+            git commit -m "Resolve conflict in ytdianbo.m3u with theirs"
           fi
 
-      - name: Push to public repository
-        env:
-          YYYY: ${{ secrets.YYYY }}
+      - name: Commit and push changes to target repo
+        working-directory: public-playlist
         run: |
-          # 使用私人令牌克隆公共仓库
-          git clone https://xiatian0502:${{ secrets.YYYY }}@github.com/xiatian0502/public-playlist.git /tmp/public-playlist
-          # 进入到 cloned 仓库目录
-          cd /tmp/public-playlist
-          # 确保工作目录干净，切勿覆盖现有文件
-          git checkout update-mytvfree
-          # 确保 git 工作目录干净
-          git reset --hard
-          git pull
-          # 更新 ytdianbo.m3u 文件 
-          cp /home/runner/work/youtube-playlist/ytdianbo.m3u /tmp/public-playlist/ytdianbo.m3u
-          # 配置 git 用户信息
-          git config --global user.email "gxia7466@gmail.com"
-          git config --global user.name "xiatian0502"
-          # 提交更改
           git add ytdianbo.m3u
-          git commit -m "Update ytdianbo.m3u"
-          # 使用私人令牌推送更改
-          git push https://xiatian0502:${{ secrets.YYYY }}@github.com/xiatian0502/public-playlist.git update-mytvfree
+          git commit -m 'Update ytdianbo.m3u' || echo "No changes to commit"
+          git pull origin update-mytvfree --rebase
+          git push origin update-mytvfree
