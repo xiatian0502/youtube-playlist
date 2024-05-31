@@ -24,7 +24,7 @@ jobs:
       - name: Install yt-dlp
         run: |
           sudo apt-get update 
-          sudo apt-get install -y yt-dlp 
+          sudo apt-get install -y yt-dlp
           python3 -m pip install --upgrade yt-dlp
 
       - name: Run youtube.php
@@ -76,8 +76,10 @@ jobs:
           fi
 
       - name: Push to public repository
+        env:
+          PUBLIC0PLAYLIST: ${{ secrets.PUBLIC0PLAYLIST }}
         run: |
-          git clone https://xiatian0502:$PUBLIC0PLAYLIST@github.com/xiatian0502/public-playlist.git /tmp/public-playlist
+          git clone https://xiatian0502:${{ secrets.PUBLIC0PLAYLIST }}@github.com/xiatian0502/public-playlist.git /tmp/public-playlist
           # 更新 public-playlist 仓库中的 ytdianbo.m3u 文件
           cp ytdianbo.m3u /tmp/public-playlist/
           cd /tmp/public-playlist
@@ -86,4 +88,4 @@ jobs:
           git checkout update-mytvfree
           git add ytdianbo.m3u
           git commit -m "Update ytdianbo.m3u"
-          git push origin update-mytvfree
+          git push https://xiatian0502:${{ secrets.PUBLIC0PLAYLIST }}@github.com/xiatian0502/public-playlist.git update-mytvfree
