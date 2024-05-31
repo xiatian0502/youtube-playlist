@@ -24,10 +24,10 @@ jobs:
       - name: Run youtube.php
         run: php youtube.php > ytdianbo.m3u
 
-      - name: Save ytdianbo.m3u
+      - name: Commit and push changes
         run: |
           git config --global user.email "you@example.com"
           git config --global user.name "Your Name"
-          git add ytdianbo.m3u
+          git add ytdianbo.m3u cache/*
           git commit -m "Update ytdianbo.m3u"
           git push
