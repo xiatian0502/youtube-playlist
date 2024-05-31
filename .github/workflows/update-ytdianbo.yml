@@ -39,7 +39,6 @@ jobs:
           git diff-index --quiet HEAD || git commit -m "Update ytdianbo.m3u"
         
       - name: Push changes
-        uses: actions-js/push@1.0.0
+        uses: ad-m/github-push-action@v0.6.0
         with:
-          branch: main
           github_token: ${{ secrets.GITHUB_TOKEN }}
