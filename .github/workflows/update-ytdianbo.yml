@@ -8,6 +8,9 @@ on:
 jobs:
   update-m3u:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
 
     steps:
       - name: Checkout repository
@@ -32,9 +35,11 @@ jobs:
       - name: Add and commit changes
         run: |
           git add ytdianbo.m3u cache/*
+          # Check if there are any changes to commit
           git diff-index --quiet HEAD || git commit -m "Update ytdianbo.m3u"
         
       - name: Push changes
-        uses: ad-m/github-push-action@v0.6.0
+        uses: actions-js/push@1.0.0
         with:
+          branch: main
           github_token: ${{ secrets.GITHUB_TOKEN }}
