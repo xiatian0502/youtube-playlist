@@ -19,8 +19,7 @@ jobs:
           php-version: 'latest'
 
       - name: Run youtube.php
-        run: php ./youtube.php
-        working-directory: youtube-playlist
+        run: php ./youtube-playlist/youtube.php
 
       - name: Commit and push changes
         run: |
