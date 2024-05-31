@@ -19,7 +19,9 @@ jobs:
           php-version: 'latest'
 
       - name: Install yt-dlp
-        run: sudo apt-get update && sudo apt-get install -y yt-dlp
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y yt-dlp
 
       - name: Run youtube.php
         run: php ./youtube.php
@@ -28,6 +30,6 @@ jobs:
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
-          git add ytdianbo.m3u
+          git add ytdianbo.m3u yt_dl_log.txt
           git commit -m "Update ytdianbo.m3u file"
           git push
