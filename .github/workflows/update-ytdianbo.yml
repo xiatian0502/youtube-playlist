@@ -19,12 +19,12 @@ jobs:
           php-version: 'latest'
 
       - name: Run youtube.php
-        run: php ./youtube-playlist/youtube.php
+        run: php ./youtube.php
 
       - name: Commit and push changes
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
-          git add youtube-playlist/ytdianbo.m3u
+          git add ytdianbo.m3u
           git commit -m "Update ytdianbo.m3u file"
           git push
