@@ -2,38 +2,38 @@
 
 $playlistIds = [
     // 添加你的播放列表 ID
-    'PLMUs_BF93V5ZSwXgrcGre0aGngSyOfv7x', 
-    'PLwACruPGUorXHJa2kX5Olh-YbKAb3rm-q', 
-    'PL0VLshn35eZIQ8eIvFcj0TiuiiVl08Jvf', 
-    'PLrVKx-I9kvCRAVwkSfzjq_eZ66f89sz_h', 
-    'PLrVKx-I9kvCQ4gkJ-IGhhh2yZq38FobF8', 
-    'PLrVKx-I9kvCTNaiwtXI3_VujjhZRYxAlM', 
-    'PLrVKx-I9kvCTT2yZaZP32LcNkza2NjrEg', 
-    'PLrVKx-I9kvCTibDObcPz6BiUwtcv66jzM', 
-    'PLrVKx-I9kvCQTawi_6WuX5y-kz0Xx2iC9', 
-    'PLrVKx-I9kvCRspO_5dqtZjYWmHsCMxYWV', 
-    'PLg4glStCiHhrb425xNCsu2pfBJvpvBVok', 
-    'PLg4glStCiHhrICchD-I3W0z7FS7LEayu2', 
-    'PLk3vQVLQ1uijSRpwOspimMhNAiT0qHUka', 
-    'PLpXA7u6Y4dGeBwrabbPCRYyGPJp-ysVmw', 
-    'PLh9lJwqeOuvN3Thq2TaIOwJvyQniZt9l0', 
-    'PLcQH5CCDoZ4-YPhda-aGyzaaWvMFsLooH', 
-    'PLcQH5CCDoZ48NOddEhDQtajOeQqvdadoJ', 
-    'PLPEKV0iMwYZLOkTmYFYxNzQnOo7aYzNiT', 
-    'PLPEKV0iMwYZIJEmmKz7MQKEaZyfPlyDHH', 
-    'PLPEKV0iMwYZLxCV3CxQWEZaMZr6QuTsgw', 
-    'PLMUs_BF93V5aqfoGAI5Jh05yscmKegN0V', 
-    'PLMUs_BF93V5YW4tbdZbBkcNsD3yU2shL0', 
-    'PLOrDt87s8A3r4X6gzfA2wIwqmARLcYMXw', 
-    'PLOrDt87s8A3oV_INolHOLEyD8Sp6XcMFa', 
-    'PLOrDt87s8A3rTu_XAg7GZODkRA_FqoOm7', 
-    'PLp7hnLHxd1KFM279kSSuitl1LZr-rk3O6', 
-    'PLp7hnLHxd1KEyrBXOq2y9QLGACMcttfZH', 
-    'PLp7hnLHxd1KGYED9S8tQmXfXTLE04euZV', 
-    'PLvHT0yeWYIuAj5owXnEm0kbext46i8CJi', 
-    'PLD0nIS14ohhcGG2fhGyvr8y6qhGQqwYGL', 
-    'PL0z1ZjXYEnlohS5MIDibsc1D8seHMwsXi', 
-    'PLXDl0OrlJGsh7UhLSyKQdL1RZcMMbaJxL', 
+    'PLMUs_BF93V5ZSwXgrcGre0aGngSyOfv7x',
+    'PLwACruPGUorXHJa2kX5Olh-YbKAb3rm-q',
+    'PL0VLshn35eZIQ8eIvFcj0TiuiiVl08Jvf',
+    'PLrVKx-I9kvCRAVwkSfzjq_eZ66f89sz_h',
+    'PLrVKx-I9kvCQ4gkJ-IGhhh2yZq38FobF8',
+    'PLrVKx-I9kvCTNaiwtXI3_VujjhZRYxAlM',
+    'PLrVKx-I9kvCTT2yZaZP32LcNkza2NjrEg',
+    'PLrVKx-I9kvCTibDObcPz6BiUwtcv66jzM',
+    'PLrVKx-I9kvCQTawi_6WuX5y-kz0Xx2iC9',
+    'PLrVKx-I9kvCRspO_5dqtZjYWmHsCMxYWV',
+    'PLg4glStCiHhrb425xNCsu2pfBJvpvBVok',
+    'PLg4glStCiHhrICchD-I3W0z7FS7LEayu2',
+    'PLk3vQVLQ1uijSRpwOspimMhNAiT0qHUka',
+    'PLpXA7u6Y4dGeBwrabbPCRYyGPJp-ysVmw',
+    'PLh9lJwqeOuvN3Thq2TaIOwJvyQniZt9l0',
+    'PLcQH5CCDoZ4-YPhda-aGyzaaWvMFsLooH',
+    'PLcQH5CCDoZ48NOddEhDQtajOeQqvdadoJ',
+    'PLPEKV0iMwYZLOkTmYFYxNzQnOo7aYzNiT',
+    'PLPEKV0iMwYZIJEmmKz7MQKEaZyfPlyDHH',
+    'PLPEKV0iMwYZLxCV3CxQWEZaMZr6QuTsgw',
+    'PLMUs_BF93V5aqfoGAI5Jh05yscmKegN0V',
+    'PLMUs_BF93V5YW4tbdZbBkcNsD3yU2shL0',
+    'PLOrDt87s8A3r4X6gzfA2wIwqmARLcYMXw',
+    'PLOrDt87s8A3oV_INolHOLEyD8Sp6XcMFa',
+    'PLOrDt87s8A3rTu_XAg7GZODkRA_FqoOm7',
+    'PLp7hnLHxd1KFM279kSSuitl1LZr-rk3O6',
+    'PLp7hnLHxd1KEyrBXOq2y9QLGACMcttfZH',
+    'PLp7hnLHxd1KGYED9S8tQmXfXTLE04euZV',
+    'PLvHT0yeWYIuAj5owXnEm0kbext46i8CJi',
+    'PLD0nIS14ohhcGG2fhGyvr8y6qhGQqwYGL',
+    'PL0z1ZjXYEnlohS5MIDibsc1D8seHMwsXi',
+    'PLXDl0OrlJGsh7UhLSyKQdL1RZcMMbaJxL',
     // 添加更多播放列表 ID，根据需要添加
 ];
 
@@ -90,15 +90,15 @@ foreach ($playlistIds as $playlistId) {
             if (file_exists($videoCacheFile) && (time() - filemtime($videoCacheFile)) < ($cacheTimeInMinutes * 60)) {
                 $streamUrl = trim(file_get_contents($videoCacheFile));
             } else {
-                // 优先获取音频+视频流 URL
-                $command = "yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' --get-url $videoUrl 2>> $logFile";
+                // 获取同时包含视频和音频的流
+                $command = "yt-dlp -f 'bestvideo+bestaudio/best' --get-url $videoUrl 2>> $logFile";
                 $streamUrl = shell_exec($command);
 
                 // 记录调试信息
                 file_put_contents($logFile, "Command: $command \nResult: $streamUrl\n", FILE_APPEND);
 
                 if (!$streamUrl) {
-                    // 尝试获取最高可用格式的视频流 URL
+                    // 尝试获取最高可用格式
                     $command = "yt-dlp -f 'best' --get-url $videoUrl 2>> $logFile";
                     $streamUrl = trim(shell_exec($command));
 
