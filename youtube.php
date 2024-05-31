@@ -13,13 +13,14 @@ if (!is_dir($cacheDir)) {
     mkdir($cacheDir, 0755, true); // 创建缓存目录
 }
 
-$logFile = '/var/www/html/yt_dl_log.txt'; // 指定一个日志文件
+$logFile = __DIR__ . '/yt_dl_log.txt'; // 修改日志文件路径为相对路径
 
 // 清空日志文件
 file_put_contents($logFile, "");
 
 // 检查 yt-dlp 版本
-$ytDlpVersion = shell_exec("/usr/local/bin/yt-dlp --version");
+$ytDlpPath = shell_exec("which yt-dlp");
+$ytDlpVersion = $ytDlpPath ? shell_exec("$ytDlpPath --version") : 'yt-dlp not found';
 file_put_contents($logFile, "yt-dlp version: $ytDlpVersion\n", FILE_APPEND);
 
 header('Content-Type: application/x-mpegURL');
@@ -35,7 +36,7 @@ foreach ($playlistIds as $playlistId) {
         $output = file_get_contents($cacheFile);
     } else {
         // 获取播放列表信息并缓存
-        $command = "/usr/local/bin/yt-dlp -J --flat-playlist --playlist-end $maxResults $playlistUrl 2>> $logFile";
+        $command = "$ytDlpPath -J --flat-playlist --playlist-end $maxResults $playlistUrl 2>> $logFile";
         $output = shell_exec($command);
         if ($output) {
             file_put_contents($cacheFile, $output);
@@ -58,7 +59,7 @@ foreach ($playlistIds as $playlistId) {
                 $streamUrl = trim(file_get_contents($videoCacheFile));
             } else {
                 // 优先获取1920x1080P的视频流 URL，如果不可用则获取最高可用格式
-                $command = "/usr/local/bin/yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url $videoUrl 2>> $logFile";
+                $command = "$ytDlpPath -f 'bestvideo[height=1080]+bestaudio/best' --get-url $videoUrl 2>> $logFile";
                 $streamUrl = shell_exec($command);
 
                 // 记录调试信息
@@ -66,7 +67,7 @@ foreach ($playlistIds as $playlistId) {
 
                 if (!$streamUrl) {
                     // 尝试获取最高可用格式的视频流 URL
-                    $command = "/usr/local/bin/yt-dlp -f 'best' --get-url $videoUrl 2>> $logFile";
+                    $command = "$ytDlpPath -f 'best' --get-url $videoUrl 2>> $logFile";
                     $streamUrl = trim(shell_exec($command));
 
                     // 记录调试信息
@@ -84,7 +85,7 @@ foreach ($playlistIds as $playlistId) {
             }
 
             if ($streamUrl) {
-                $videoData = shell_exec("/usr/local/bin/yt-dlp -J $videoUrl 2>> $logFile");
+                $videoData = shell_exec("$ytDlpPath -J $videoUrl 2>> $logFile");
                 $videoData = json_decode($videoData, true);
                 if (isset($videoData['title']) && isset($videoData['uploader'])) {
                     $groupTitle = htmlspecialchars($videoData['uploader'], ENT_QUOTES, 'UTF-8');
