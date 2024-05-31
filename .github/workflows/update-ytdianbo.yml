@@ -25,7 +25,13 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y yt-dlp
 
       - name: Run youtube.php
-        run: php youtube.php > ytdianbo.m3u
+        run: |
+          php youtube.php > ytdianbo.m3u 
+          # 输出日志以及生成的 m3u 文件内容
+          echo "内容: ytdianbo.m3u"
+          cat ytdianbo.m3u
+          echo "日志: cache/yt_dl_log.txt"
+          cat cache/yt_dl_log.txt
 
       - name: Configure git
         run: |
