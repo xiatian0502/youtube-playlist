@@ -20,7 +20,6 @@ ERROR: [youtube] ZvTw1FIuL0I: Premieres in 6 days
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=ZvTw1FIuL0I 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=ZvTw1FIuL0I
-WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
 ERROR: [youtube] Dy-W43Cm53s: Private video. Sign in if you've been granted access to this video
 Command: yt-dlp -f 'bestvideo+bestaudio/best' --get-url https://www.youtube.com/watch?v=Dy-W43Cm53s 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
@@ -165,6 +164,7 @@ ERROR: [youtube] vEk750p39aE: Private video. Sign in if you've been granted acce
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=vEk750p39aE 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=vEk750p39aE
+WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
 ERROR: [youtube] w0M6kzGquz8: Private video. Sign in if you've been granted access to this video
 Command: yt-dlp -f 'bestvideo+bestaudio/best' --get-url https://www.youtube.com/watch?v=w0M6kzGquz8 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
