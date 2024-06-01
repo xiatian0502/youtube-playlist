@@ -1,10 +1,7 @@
 <?php
 
 $playlistIds = [
-    // 添加你的播放列表 ID
-    'PLMUs_BF93V5ZSwXgrcGre0aGngSyOfv7x',
-    'PLwACruPGUorXHJa2kX5Olh-YbKAb3rm-q',
-    'PL0VLshn35eZIQ8eIvFcj0TiuiiVl08Jvf',
+    'PLQWMqkNuwweK2NUFEex3Jked5lBWcUIJc&index=6',
     'PLrVKx-I9kvCRAVwkSfzjq_eZ66f89sz_h',
     'PLrVKx-I9kvCQ4gkJ-IGhhh2yZq38FobF8',
     'PLrVKx-I9kvCTNaiwtXI3_VujjhZRYxAlM',
@@ -33,107 +30,57 @@ $playlistIds = [
     'PLvHT0yeWYIuAj5owXnEm0kbext46i8CJi',
     'PLD0nIS14ohhcGG2fhGyvr8y6qhGQqwYGL',
     'PL0z1ZjXYEnlohS5MIDibsc1D8seHMwsXi',
-    'PLXDl0OrlJGsh7UhLSyKQdL1RZcMMbaJxL',
-    // 添加更多播放列表 ID，根据需要添加
+    'PLXDl0OrlJGsh7UhLSyKQdL1RZcMMbaJxL' // 新添加的播放列表ID
+    'PLQWMqkNuwweLu5hFpWCVHiRkdHhrHBpop'    // 新添加的播放列表ID
 ];
-
 $maxResults = 20;
-$cacheTimeInMinutes = 1440; // 缓存时间设置为1天（1440分钟）
-$cacheDir = __DIR__ . '/cache'; // 缓存目录
+$API_key = 'AIzaSyAONZd3f8TN6QZS39WCeddl7YqP1TdhkkQ'; 
 
-if (!is_dir($cacheDir)) {
-    mkdir($cacheDir, 0755, true); // 创建缓存目录
-}
-
-// 在GitHub Actions下，我们没有服务器路径，因此使用临时文件路径进行日志记录
-$logFile = $cacheDir . '/yt_dl_log.txt'; // 指定日志文件路径
-
-// 清空日志文件
-file_put_contents($logFile, "");
-
-// 检查 yt-dlp 版本
-$ytDlpVersion = shell_exec("yt-dlp --version");
-file_put_contents($logFile, "yt-dlp version: $ytDlpVersion\n", FILE_APPEND);
-
-header('Content-Type: application/x-mpegURL');
-header('Content-Disposition: attachment; filename="playlist.m3u"');
-echo "#EXTM3U\n";
+$categories = [];
 
 foreach ($playlistIds as $playlistId) {
-    $playlistUrl = "https://www.youtube.com/playlist?list=$playlistId";
-    $cacheFile = $cacheDir . '/' . sha1($playlistId) . '.json';
+    $videoList = json_decode(file_get_contents('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=' . $maxResults . '&playlistId=' . $playlistId . '&key=' . $API_key), true);
 
-    // 如果缓存文件有效且存在，直接读取缓存
-    if (file_exists($cacheFile) && (time() - filemtime($cacheFile)) < ($cacheTimeInMinutes * 60)) {
-        $output = file_get_contents($cacheFile);
-    } else {
-        // 获取播放列表信息并缓存
-        $command = "yt-dlp -J --flat-playlist --playlist-end $maxResults $playlistUrl 2>> $logFile";
-        $output = shell_exec($command);
-        if ($output) {
-            file_put_contents($cacheFile, $output);
-        } else {
-            file_put_contents($logFile, "Failed to fetch playlist data for $playlistUrl\n", FILE_APPEND);
-            continue;
-        }
+    if (!$videoList || !isset($videoList['items'])) {
+        $categories["未分类"][] = "#播放列表 " . $playlistId . " 未找到";
+        continue;
     }
 
-    $data = json_decode($output, true);
+    foreach ($videoList['items'] as $item) {
+        $youtubeUrl = 'https://www.youtube.com/watch?v=' . $item['snippet']['resourceId']['videoId'];
+        $videoTitle = $item['snippet']['title'];
+        $channelId = $item['snippet']['channelId'];
 
-    if (is_array($data) && isset($data['entries'])) {
-        foreach ($data['entries'] as $entry) {
-            $videoId = $entry['id'];
-            $videoUrl = 'https://www.youtube.com/watch?v=' . $videoId;
-            $videoCacheFile = $cacheDir . '/' . sha1($videoId) . '.json';
+        // 获取频道名称
+        $channelInfo = json_decode(file_get_contents('https://www.googleapis.com/youtube/v3/channels?part=snippet&id=' . $channelId . '&key=' . $API_key), true);
+        $channelTitle = isset($channelInfo['items'][0]['snippet']['title']) ? $channelInfo['items'][0]['snippet']['title'] : '未知频道';
 
-            // 如果视频缓存文件有效且存在，直接读取缓存
-            if (file_exists($videoCacheFile) && (time() - filemtime($videoCacheFile)) < ($cacheTimeInMinutes * 60)) {
-                $streamUrl = trim(file_get_contents($videoCacheFile));
-            } else {
-                // 获取同时包含视频和音频的流
-                $command = "yt-dlp -f 'bestvideo+bestaudio/best' --get-url $videoUrl 2>> $logFile";
-                $streamUrl = shell_exec($command);
+        $command = "/home/runner/.local/bin/yt-dlp -f best --get-url --no-playlist --no-warnings --force-generic-extractor --user-agent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0' --youtube-skip-dash-manifest " . escapeshellarg($youtubeUrl);
+        $streamUrl = shell_exec($command);
 
-                // 记录调试信息
-                file_put_contents($logFile, "Command: $command \nResult: $streamUrl\n", FILE_APPEND);
-
-                if (!$streamUrl) {
-                    // 尝试获取最高可用格式
-                    $command = "yt-dlp -f 'best' --get-url $videoUrl 2>> $logFile";
-                    $streamUrl = trim(shell_exec($command));
-
-                    // 记录调试信息
-                    file_put_contents($logFile, "Fallback Command: $command \nFallback Result: $streamUrl\n", FILE_APPEND);
-                } else {
-                    $streamUrl = trim($streamUrl);
-                }
-
-                if ($streamUrl) {
-                    file_put_contents($videoCacheFile, $streamUrl);
-                } else {
-                    file_put_contents($logFile, "Failed to retrieve stream URL for $videoUrl\n", FILE_APPEND);
-                    continue;
-                }
-            }
-
-            if ($streamUrl) {
-                $videoData = shell_exec("yt-dlp -J $videoUrl 2>> $logFile");
-                $videoData = json_decode($videoData, true);
-                if (isset($videoData['title']) && isset($videoData['uploader'])) {
-                    $groupTitle = htmlspecialchars($videoData['uploader'], ENT_QUOTES, 'UTF-8');
-                    $videoTitle = htmlspecialchars($videoData['title'], ENT_QUOTES, 'UTF-8');
-
-                    echo "#EXTINF:-1 group-title=\"$groupTitle\",$videoTitle\n";
-                    echo "$streamUrl\n";
-                }
-            } else {
-                echo "#EXTINF:-1,Failed to retrieve stream URL for $videoUrl\n";
-                echo "https://www.example.com/empty.m3u8\n";
-            }
+        if ($streamUrl !== null && strpos($streamUrl, 'http') === 0) {
+            $streamUrl = trim($streamUrl);
+        } else {
+            $streamUrl = $youtubeUrl;  // 使用原始URL
         }
-    } else {
-        echo "#EXTINF:-1,No videos found for playlist $playlistUrl\n";
-        echo "https://www.example.com/empty.m3u8\n";
+
+        if (!isset($categories[$channelTitle])) {
+            $categories[$channelTitle] = [];
+        }
+        $categories[$channelTitle][] = "#EXTINF:-1 group-title=\"" . $channelTitle . "\"," . $videoTitle . PHP_EOL . $streamUrl . PHP_EOL;
     }
 }
+
+$file = fopen('playlist.m3u', 'w');
+fwrite($file, "#EXTM3U" . PHP_EOL);
+
+foreach ($categories as $category => $videos) {
+    if (!empty($videos)) {
+        foreach ($videos as $video) {
+            fwrite($file, $video);
+        }
+    }
+}
+
+fclose($file);
 ?>
