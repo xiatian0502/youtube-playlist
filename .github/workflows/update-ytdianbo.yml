@@ -1,61 +1,76 @@
-name: Generate YouTube Playlist
+name: Update YouTube Playlist M3U
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # 定时任务，UTC时间每日0点
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+    - cron: '0 0 */10 * *' # 每隔10天运行一次
+  workflow_dispatch: # 允许手动触发工作流
 
 jobs:
-  generate-playlist:
+  update-m3u:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
+    defaults:
+      run:
+        shell: bash
 
     steps:
-      - name: Checkout repository content
+      - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '7.4'
+          php-version: '8.0' # 你可以根据需要调整 PHP 版本
 
-      - name: Install yt-dlp and ffmpeg
+      - name: Install yt-dlp
         run: |
-          sudo apt-get update
-          sudo apt-get install -y python3 python3-pip ffmpeg
-          pip3 install yt-dlp
-
-      - name: Confirm yt-dlp and ffmpeg installation
-        run: |
-          which yt-dlp
-          which ffmpeg
+          sudo apt-get update 
+          sudo apt-get install -y yt-dlp 
+          python3 -m pip install --upgrade yt-dlp
 
       - name: Run youtube.php
-        run: php youtube.php
-
-      - name: List directory content
-        run: ls -la
-
-      - name: Display content of playlist.m3u
-        run: cat playlist.m3u || echo 'playlist.m3u 不存在'
-
-      - name: Stash local changes
         run: |
-          git stash
+          php youtube.php > ytdianbo.m3u 
+          # 输出日志以及生成的 m3u 文件内容
+          echo "内容: ytdianbo.m3u"
+          if [ -f ytdianbo.m3u ]; then
+              cat ytdianbo.m3u
+          else
+              echo "ytdianbo.m3u 文件未生成"
+          fi
 
-      - name: Commit and push changes
+          echo "日志: cache/yt_dl_log.txt"
+          if [ -f cache/yt_dl_log.txt ]; then
+              cat cache/yt_dl_log.txt
+          else
+              echo "cache/yt_dl_log.txt 文件未生成"
+          fi
+
+      - name: Configure git
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git pull --rebase
-          git stash pop
-          git add playlist.m3u
-          git commit -m 'Update playlist.m3u'
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git config --global user.email "gxia7466@gmail.com"
+          git config --global user.name "xiatian0502"
+
+      - name: Pull latest changes
+        run: |
+          git pull origin main
+
+      - name: Add and commit changes
+        run: |
+          git add ytdianbo.m3u cache/*
+          # Check if there are any changes to commit
+          git diff-index --quiet HEAD || git commit -m "Update ytdianbo.m3u"
+
+      - name: Push changes
+        run: |
+          git push origin HEAD:main
+
+      - name: Verify M3U File
+        run: |
+          # 验证是否内容正确
+          echo "验证M3U文件内容:"
+          if [ -f ytdianbo.m3u ]; then
+              cat ytdianbo.m3u
+          else
+              echo "未找到ytdianbo.m3u 文件"
+              exit 1
+          fi
