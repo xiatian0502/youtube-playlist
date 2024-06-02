@@ -1,27 +1,27 @@
 yt-dlp version: 2024.05.27
 
-ERROR: [youtube] gUnqHaTFPOI: Premieres in 27 days
-Command: yt-dlp -f 'bestvideo+bestaudio/best' --get-url https://www.youtube.com/watch?v=gUnqHaTFPOI 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
+ERROR: [youtube] gUnqHaTFPOI: Premieres in 26 days
+Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=gUnqHaTFPOI 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
          If you know what you are doing and want only the best pre-merged format, use "-f b" instead to suppress this warning
-ERROR: [youtube] gUnqHaTFPOI: Premieres in 27 days
+ERROR: [youtube] gUnqHaTFPOI: Premieres in 26 days
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=gUnqHaTFPOI 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=gUnqHaTFPOI
-ERROR: [youtube] ZvTw1FIuL0I: Premieres in 6 days
-Command: yt-dlp -f 'bestvideo+bestaudio/best' --get-url https://www.youtube.com/watch?v=ZvTw1FIuL0I 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
+ERROR: [youtube] ZvTw1FIuL0I: Premieres in 5 days
+Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=ZvTw1FIuL0I 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
          If you know what you are doing and want only the best pre-merged format, use "-f b" instead to suppress this warning
-ERROR: [youtube] ZvTw1FIuL0I: Premieres in 6 days
+ERROR: [youtube] ZvTw1FIuL0I: Premieres in 5 days
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=ZvTw1FIuL0I 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=ZvTw1FIuL0I
 ERROR: [youtube] Dy-W43Cm53s: Private video. Sign in if you've been granted access to this video
-Command: yt-dlp -f 'bestvideo+bestaudio/best' --get-url https://www.youtube.com/watch?v=Dy-W43Cm53s 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
+Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=Dy-W43Cm53s 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
@@ -31,7 +31,7 @@ Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=Dy-
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=Dy-W43Cm53s
 ERROR: [youtube] Iu9g3CoDUR8: Private video. Sign in if you've been granted access to this video
-Command: yt-dlp -f 'bestvideo+bestaudio/best' --get-url https://www.youtube.com/watch?v=Iu9g3CoDUR8 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
+Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=Iu9g3CoDUR8 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
@@ -40,9 +40,8 @@ ERROR: [youtube] Iu9g3CoDUR8: Private video. Sign in if you've been granted acce
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=Iu9g3CoDUR8 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=Iu9g3CoDUR8
-WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
 ERROR: [youtube] LjhzGe8a_Ys: Video unavailable. This video is no longer available due to a copyright claim by Dental Digest
-Command: yt-dlp -f 'bestvideo+bestaudio/best' --get-url https://www.youtube.com/watch?v=LjhzGe8a_Ys 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
+Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=LjhzGe8a_Ys 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
@@ -51,11 +50,8 @@ ERROR: [youtube] LjhzGe8a_Ys: Video unavailable. This video is no longer availab
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=LjhzGe8a_Ys 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=LjhzGe8a_Ys
-WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
-WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
-WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
 ERROR: [youtube] _10q6AvlCBk: Private video. Sign in if you've been granted access to this video
-Command: yt-dlp -f 'bestvideo+bestaudio/best' --get-url https://www.youtube.com/watch?v=_10q6AvlCBk 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
+Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=_10q6AvlCBk 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
@@ -65,7 +61,7 @@ Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=_10
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=_10q6AvlCBk
 ERROR: [youtube] dMq23nMGGAA: Private video. Sign in if you've been granted access to this video
-Command: yt-dlp -f 'bestvideo+bestaudio/best' --get-url https://www.youtube.com/watch?v=dMq23nMGGAA 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
+Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=dMq23nMGGAA 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
@@ -75,7 +71,7 @@ Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=dMq
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=dMq23nMGGAA
 ERROR: [youtube] 8n1nMPC9w_E: Private video. Sign in if you've been granted access to this video
-Command: yt-dlp -f 'bestvideo+bestaudio/best' --get-url https://www.youtube.com/watch?v=8n1nMPC9w_E 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
+Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=8n1nMPC9w_E 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
@@ -85,7 +81,7 @@ Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=8n1
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=8n1nMPC9w_E
 ERROR: [youtube] Jtj0zORq4Dw: Private video. Sign in if you've been granted access to this video
-Command: yt-dlp -f 'bestvideo+bestaudio/best' --get-url https://www.youtube.com/watch?v=Jtj0zORq4Dw 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
+Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=Jtj0zORq4Dw 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
@@ -95,7 +91,7 @@ Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=Jtj
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=Jtj0zORq4Dw
 ERROR: [youtube] kf0S55a0neY: Private video. Sign in if you've been granted access to this video
-Command: yt-dlp -f 'bestvideo+bestaudio/best' --get-url https://www.youtube.com/watch?v=kf0S55a0neY 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
+Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=kf0S55a0neY 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
@@ -105,7 +101,7 @@ Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=kf0
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=kf0S55a0neY
 ERROR: [youtube] BjIftYQW3-I: Private video. Sign in if you've been granted access to this video
-Command: yt-dlp -f 'bestvideo+bestaudio/best' --get-url https://www.youtube.com/watch?v=BjIftYQW3-I 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
+Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=BjIftYQW3-I 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
@@ -115,7 +111,7 @@ Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=BjI
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=BjIftYQW3-I
 ERROR: [youtube] fEvjxTtFs6Q: Private video. Sign in if you've been granted access to this video
-Command: yt-dlp -f 'bestvideo+bestaudio/best' --get-url https://www.youtube.com/watch?v=fEvjxTtFs6Q 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
+Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=fEvjxTtFs6Q 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
@@ -125,7 +121,7 @@ Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=fEv
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=fEvjxTtFs6Q
 ERROR: [youtube] oKTo4JtwKJQ: Private video. Sign in if you've been granted access to this video
-Command: yt-dlp -f 'bestvideo+bestaudio/best' --get-url https://www.youtube.com/watch?v=oKTo4JtwKJQ 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
+Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=oKTo4JtwKJQ 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
@@ -135,7 +131,7 @@ Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=oKT
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=oKTo4JtwKJQ
 ERROR: [youtube] XFPVhm94Ls0: Private video. Sign in if you've been granted access to this video
-Command: yt-dlp -f 'bestvideo+bestaudio/best' --get-url https://www.youtube.com/watch?v=XFPVhm94Ls0 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
+Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=XFPVhm94Ls0 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
@@ -145,7 +141,7 @@ Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=XFP
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=XFPVhm94Ls0
 ERROR: [youtube] gCrFUMGk-JM: Video unavailable. This video has been removed by the uploader
-Command: yt-dlp -f 'bestvideo+bestaudio/best' --get-url https://www.youtube.com/watch?v=gCrFUMGk-JM 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
+Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=gCrFUMGk-JM 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
@@ -155,7 +151,7 @@ Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=gCr
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=gCrFUMGk-JM
 ERROR: [youtube] vEk750p39aE: Private video. Sign in if you've been granted access to this video
-Command: yt-dlp -f 'bestvideo+bestaudio/best' --get-url https://www.youtube.com/watch?v=vEk750p39aE 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
+Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=vEk750p39aE 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
@@ -164,34 +160,3 @@ ERROR: [youtube] vEk750p39aE: Private video. Sign in if you've been granted acce
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=vEk750p39aE 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=vEk750p39aE
-WARNING: [youtube] Incomplete data received in embedded initial data; re-fetching using API.
-ERROR: [youtube] w0M6kzGquz8: Private video. Sign in if you've been granted access to this video
-Command: yt-dlp -f 'bestvideo+bestaudio/best' --get-url https://www.youtube.com/watch?v=w0M6kzGquz8 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
-Result: 
-WARNING: "-f best" selects the best pre-merged format which is often not the best option.
-         To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
-         If you know what you are doing and want only the best pre-merged format, use "-f b" instead to suppress this warning
-ERROR: [youtube] w0M6kzGquz8: Private video. Sign in if you've been granted access to this video
-Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=w0M6kzGquz8 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
-Fallback Result: 
-Failed to retrieve stream URL for https://www.youtube.com/watch?v=w0M6kzGquz8
-ERROR: [youtube] zZkjncQ0b5Q: Private video. Sign in if you've been granted access to this video
-Command: yt-dlp -f 'bestvideo+bestaudio/best' --get-url https://www.youtube.com/watch?v=zZkjncQ0b5Q 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
-Result: 
-WARNING: "-f best" selects the best pre-merged format which is often not the best option.
-         To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
-         If you know what you are doing and want only the best pre-merged format, use "-f b" instead to suppress this warning
-ERROR: [youtube] zZkjncQ0b5Q: Private video. Sign in if you've been granted access to this video
-Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=zZkjncQ0b5Q 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
-Fallback Result: 
-Failed to retrieve stream URL for https://www.youtube.com/watch?v=zZkjncQ0b5Q
-ERROR: [youtube] zqUNd2ij5-o: Private video. Sign in if you've been granted access to this video
-Command: yt-dlp -f 'bestvideo+bestaudio/best' --get-url https://www.youtube.com/watch?v=zqUNd2ij5-o 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
-Result: 
-WARNING: "-f best" selects the best pre-merged format which is often not the best option.
-         To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
-         If you know what you are doing and want only the best pre-merged format, use "-f b" instead to suppress this warning
-ERROR: [youtube] zqUNd2ij5-o: Private video. Sign in if you've been granted access to this video
-Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=zqUNd2ij5-o 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
-Fallback Result: 
-Failed to retrieve stream URL for https://www.youtube.com/watch?v=zqUNd2ij5-o
