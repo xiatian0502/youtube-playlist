@@ -1,25 +1,20 @@
 yt-dlp version: 2024.05.27
 
-ERROR: [youtube] gUnqHaTFPOI: Premieres in 26 days
+ERROR: [youtube] FyliokAgv6g: Join this channel to get access to members-only content like this video, and other exclusive perks.
+ERROR: [youtube] gUnqHaTFPOI: Premieres in 17 days
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=gUnqHaTFPOI 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
          If you know what you are doing and want only the best pre-merged format, use "-f b" instead to suppress this warning
-ERROR: [youtube] gUnqHaTFPOI: Premieres in 26 days
+ERROR: [youtube] gUnqHaTFPOI: Premieres in 17 days
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=gUnqHaTFPOI 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=gUnqHaTFPOI
-ERROR: [youtube] ZvTw1FIuL0I: Premieres in 5 days
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=ZvTw1FIuL0I 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
-Result: 
-WARNING: "-f best" selects the best pre-merged format which is often not the best option.
-         To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
-         If you know what you are doing and want only the best pre-merged format, use "-f b" instead to suppress this warning
-ERROR: [youtube] ZvTw1FIuL0I: Premieres in 5 days
-Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=ZvTw1FIuL0I 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
-Fallback Result: 
-Failed to retrieve stream URL for https://www.youtube.com/watch?v=ZvTw1FIuL0I
+Result: https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1718089657/ei/WaNnZrjNBuWykucPjbeSmAc/ip/20.161.77.192/id/66f4f0d4522e2f42/itag/616/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D697711257%3Bdur%3D2286.700%3Bgir%3Dyes%3Bitag%3D356%3Blmt%3D1717828767892923/rqh/1/hls_chunk_host/rr1---sn-p5qddn7r.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/mh/jH/mm/31,26/mn/sn-p5qddn7r,sn-vgqsknzk/ms/au,onr/mv/m/mvi/1/pl/16/force_finished/1/initcwndbps/2701250/vprv/1/playlist_type/DVR/dover/13/txp/5532434/mt/1718067418/fvip/2/short_key/1/keepalive/yes/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,force_finished,vprv,playlist_type/sig/AJfQdSswRAIgETcl1pth5V_lxL1RrNO3PtfWVNuOh4MtS6t55S3_-OoCIDCja226duwUCMHk8xc19O5FiW0oxIPyF-U1GdqSwM9K/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pl,initcwndbps/lsig/AHlkHjAwRQIhAIQc7pvreSngCBPPVyqkx3HsM_QchiyaXKyZdPfrsp_QAiAC0ksWPpG1OVINBi2FsllfHH6D7-D1-i0rjkmYEI0QFQ%3D%3D/playlist/index.m3u8
+https://rr1---sn-p5qddn7r.googlevideo.com/videoplayback?expire=1718089655&ei=V6NnZr2nJ6e80_wPiueRwAs&ip=20.161.77.192&id=o-AGrnYSMV1hyA03J0NkC4IELPdlNH2x5EiXNYXx8xWIn6&itag=251&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=jH&mm=31%2C26&mn=sn-p5qddn7r%2Csn-vgqsknzk&ms=au%2Conr&mv=m&mvi=1&pl=16&initcwndbps=1850000&bui=AbKP-1OFfifmyw5Sbif3BuzU5xi-kieQNz5lZJ9_cewjQRoukYljiVgYp2IQ81dxsV-7A-IVV5fsBiDX&spc=UWF9f2qSl96YvYDC4Uhnv7HrVi7gJQUJ8Y4exl7sodlLpCMEWqFuN5YkIrUG&vprv=1&svpuc=1&mime=audio%2Fwebm&ns=HKbtL-vNVMOvEbRg3zfpGYsQ&rqh=1&gir=yes&clen=30063392&dur=2286.721&lmt=1717823295393225&mt=1718067418&fvip=2&keepalive=yes&c=WEB&sefc=1&txp=5532434&n=SzF96kg98CQvLQ&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRgIhALbco1FDVe6MuIOs57Uyd2lL8RnYCSOiL1umQTRq1EbVAiEAqB9SjoCDnQLsRBMaregQBf_mRw7kTXa9IAcbhC4lH-4%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AHlkHjAwRQIgMcNUOCZBn_Nim03W4pqmGAiOewKJB7qdrA_aNAoyHZICIQCOr_uQ39ROOsNsdzku8Za8gSimXJrcWmM8PG8ibu7aPA%3D%3D
+
 ERROR: [youtube] Dy-W43Cm53s: Private video. Sign in if you've been granted access to this video
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=Dy-W43Cm53s 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
