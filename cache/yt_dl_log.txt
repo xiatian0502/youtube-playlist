@@ -1,8 +1,35 @@
-yt-dlp version: 2024.07.16
+yt-dlp version: 2024.07.25
 
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] 3Okf8nOIVLY: nsig extraction failed: Some formats may be missing
+         n = FJ-9fR3EhRzGfdJr ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] 3Okf8nOIVLY: nsig extraction failed: Some formats may be missing
+         n = rh9pDAO718yf3bFU ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] QstZigpi-2A: nsig extraction failed: Some formats may be missing
+         n = 8D2uprpMC-Pg0qFO ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] QstZigpi-2A: nsig extraction failed: Some formats may be missing
+         n = LYJ-h3YBpyHFu1mo ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
 ERROR: [youtube] FyliokAgv6g: Video unavailable. This video contains content from HunanTV-芒果TV, who has blocked it on copyright grounds
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] SHfh22eM1bU: nsig extraction failed: Some formats may be missing
+         n = u2wJW_GPZ-S_w9aN ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] SHfh22eM1bU: nsig extraction failed: Some formats may be missing
+         n = wq2vktNsp2EUbDqN ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
@@ -12,6 +39,7 @@ Result:
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
          If you know what you are doing and want only the best pre-merged format, use "-f b" instead to suppress this warning
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 ERROR: [youtube] Dy-W43Cm53s: Private video. Sign in if you've been granted access to this video
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=Dy-W43Cm53s 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
@@ -26,7 +54,57 @@ ERROR: [youtube] Iu9g3CoDUR8: Private video. Sign in if you've been granted acce
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=Iu9g3CoDUR8 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=Iu9g3CoDUR8
+WARNING: [youtube] C6JF84laCNg: nsig extraction failed: Some formats may be missing
+         n = Lhcp142FmeshD4IW ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] C6JF84laCNg: nsig extraction failed: Some formats may be missing
+         n = Q1HnakKEzu3UJZWM ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] 9_BuadyrNls: nsig extraction failed: Some formats may be missing
+         n = lK8oSfnQZsD61epY ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] 9_BuadyrNls: nsig extraction failed: Some formats may be missing
+         n = -cKl-RivuIjCkMGs ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] pEYMNIc1Z0o: nsig extraction failed: Some formats may be missing
+         n = E6FS90jwo9T5GGL2 ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] pEYMNIc1Z0o: nsig extraction failed: Some formats may be missing
+         n = RMLH5kSGtB8Y_N_Z ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+ERROR: [youtube] pEYMNIc1Z0o: Sign in to confirm your age. This video may be inappropriate for some users.
+WARNING: [youtube] OfxqUZ06HFA: nsig extraction failed: Some formats may be missing
+         n = K1FRzfBqZWPX-eJi ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] OfxqUZ06HFA: nsig extraction failed: Some formats may be missing
+         n = C662CLN9WGsUyKz8 ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] qW7zV98YPJY: nsig extraction failed: Some formats may be missing
+         n = rx4Djq72_P5Hoymx ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] qW7zV98YPJY: nsig extraction failed: Some formats may be missing
+         n = YFOJYvhVhhEEa7i9 ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] 6rHWbVPVBFc: nsig extraction failed: Some formats may be missing
+         n = GYHQ80panHhTiQlU ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] 6rHWbVPVBFc: nsig extraction failed: Some formats may be missing
+         n = Hhde1zP8qyHKY-Lh ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] 9RKgicOD0r4: nsig extraction failed: Some formats may be missing
+         n = WygNlviUd3m69D5O ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] 9RKgicOD0r4: nsig extraction failed: Some formats may be missing
+         n = fOUm11XZRI4G0zwB ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] s9y-c9lcsjI: nsig extraction failed: Some formats may be missing
+         n = a9AUwyzLaBu2r5VA ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] s9y-c9lcsjI: nsig extraction failed: Some formats may be missing
+         n = ZjU6PHxF85Wy90vh ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] ovf-3g0pFuA: nsig extraction failed: Some formats may be missing
+         n = GyLlzwzQnI2veHGk ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] ovf-3g0pFuA: nsig extraction failed: Some formats may be missing
+         n = 0b_Gq0I4SpV9D8vz ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
@@ -35,6 +113,19 @@ WARNING: [youtube] Webpage contains broken formats (poToken experiment detected)
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 ERROR: [youtube] x2o42s0MI10: Video unavailable. This video is no longer available due to a copyright claim by a_hisa
+WARNING: [youtube] ocdpwOaEGDI: nsig extraction failed: Some formats may be missing
+         n = _lCh8FyxCnw0yMpI ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] ocdpwOaEGDI: nsig extraction failed: Some formats may be missing
+         n = GQu1IJisx3BTlJMM ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 ERROR: [youtube] LjhzGe8a_Ys: Video unavailable. This video is no longer available due to a copyright claim by Dental Digest
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=LjhzGe8a_Ys 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
@@ -46,27 +137,228 @@ ERROR: [youtube] LjhzGe8a_Ys: Video unavailable. This video is no longer availab
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=LjhzGe8a_Ys 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=LjhzGe8a_Ys
+WARNING: [youtube] ta94SAMMhIU: nsig extraction failed: Some formats may be missing
+         n = _9_A7yEwGl6cJWzB ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] ta94SAMMhIU: nsig extraction failed: Some formats may be missing
+         n = doHuwLk0pRLMT1Jt ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] YGhSUazcYPI: nsig extraction failed: Some formats may be missing
+         n = 3wlqPrtVmWpo53iB ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] YGhSUazcYPI: nsig extraction failed: Some formats may be missing
+         n = cYQ5Kq4VMjqS5wKZ ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] gqGsmX0xRm0: nsig extraction failed: Some formats may be missing
+         n = 0bFUHscqLr6pWgDU ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] gqGsmX0xRm0: nsig extraction failed: Some formats may be missing
+         n = CjnvbTe1dUYGUXZK ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] 6lBu7dmEOGw: nsig extraction failed: Some formats may be missing
+         n = _4fGTIpQLvFUf757 ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
-WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
-WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
-WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
-WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
-WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
-WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
-WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
-WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] QCX0rgYDtb8: nsig extraction failed: Some formats may be missing
+         n = XJ-OXUa85FaNq9OZ ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] QCX0rgYDtb8: nsig extraction failed: Some formats may be missing
+         n = HD9A1_GicrVUspO0 ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Q2RAgCW-mx8: nsig extraction failed: Some formats may be missing
+         n = eLxwYeK-pQHVzI31 ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Q2RAgCW-mx8: nsig extraction failed: Some formats may be missing
+         n = 4alRoOnEqFM8XfNu ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] 079nk7_GmHI: nsig extraction failed: Some formats may be missing
+         n = 5ZVE1HjyPKRvf-xP ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] 079nk7_GmHI: nsig extraction failed: Some formats may be missing
+         n = 2okwRtR3t8Oi-Mq6 ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (2/3)...
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] SRY1UqUyR-M: nsig extraction failed: Some formats may be missing
+         n = pEiFlJ5NJREqhNu0 ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] SRY1UqUyR-M: nsig extraction failed: Some formats may be missing
+         n = E7icH3EP8vectMXv ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] Qr6toDilYWI: nsig extraction failed: Some formats may be missing
+         n = sy2yh3HSuQHDC1Df ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Qr6toDilYWI: nsig extraction failed: Some formats may be missing
+         n = 2xZB0zCCLRKEU8CU ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] LoFn3pOMkq0: nsig extraction failed: Some formats may be missing
+         n = ptJY2PfrapHVrRku ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] LoFn3pOMkq0: nsig extraction failed: Some formats may be missing
+         n = Vb-9EKzfWxI0ebyJ ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] -SJtLHw_hWk: nsig extraction failed: Some formats may be missing
+         n = RpyMpjNAuErJ_Hu4 ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] -SJtLHw_hWk: nsig extraction failed: Some formats may be missing
+         n = igCTj4Vqb9lfpHjD ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] RgZi0O5c6gA: nsig extraction failed: Some formats may be missing
+         n = bwz6oQsfWjzGnsLV ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] RgZi0O5c6gA: nsig extraction failed: Some formats may be missing
+         n = PNikQr5-rrZMqjCc ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] 3nuGa1QDGN0: nsig extraction failed: Some formats may be missing
+         n = oD8bPDNXrWLabkHs ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] 3nuGa1QDGN0: nsig extraction failed: Some formats may be missing
+         n = 2Znz9eEZFMNBKsKD ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] RjRZmTqoIqo: nsig extraction failed: Some formats may be missing
+         n = ImvJF5GZVRxWciik ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] RjRZmTqoIqo: nsig extraction failed: Some formats may be missing
+         n = pO4mLakxEJXvkYHN ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (2/3)...
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (3/3)...
+WARNING: [youtube] BFhKK9wbLvE: nsig extraction failed: Some formats may be missing
+         n = yJ949lF6be2Y_1or ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] BFhKK9wbLvE: nsig extraction failed: Some formats may be missing
+         n = GkBZgpYRz4WSfUoP ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] 8-a_JOekL-Y: nsig extraction failed: Some formats may be missing
+         n = fT2dWUTwXnc3fevf ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] 8-a_JOekL-Y: nsig extraction failed: Some formats may be missing
+         n = x96c0kkq0inAycdH ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] 52mz_yQ_Ihg: nsig extraction failed: Some formats may be missing
+         n = 49qSf6dGYCL62Ws7 ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] 52mz_yQ_Ihg: nsig extraction failed: Some formats may be missing
+         n = -EVOZp0L2RIOK1xA ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (2/3)...
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] HR8QNn_dNys: nsig extraction failed: Some formats may be missing
+         n = VFYP3lBjtrJFcGw9 ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] HR8QNn_dNys: nsig extraction failed: Some formats may be missing
+         n = KiH4S0JbbeyDxVKu ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] 5YnCVkqHtbc: nsig extraction failed: Some formats may be missing
+         n = x2Qc_j9CRdbBmFND ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] 5YnCVkqHtbc: nsig extraction failed: Some formats may be missing
+         n = eUyP5W7nFXqWvpaF ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] aYwn72bd90k: nsig extraction failed: Some formats may be missing
+         n = IP3nmt-PaL-emxPd ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] aYwn72bd90k: nsig extraction failed: Some formats may be missing
+         n = u3hc7FZJjHaopWWW ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] girSXwQfZj8: nsig extraction failed: Some formats may be missing
+         n = LoBi3cn0_7MKg-qS ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] girSXwQfZj8: nsig extraction failed: Some formats may be missing
+         n = jCHICDZ7ipAAAiv2 ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] PnSE0rXzHKE: nsig extraction failed: Some formats may be missing
+         n = 3decj3FO2sJNB3HD ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] PnSE0rXzHKE: nsig extraction failed: Some formats may be missing
+         n = 46ZAwxrLQVf4TJKQ ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] 12INmUQq87Q: nsig extraction failed: Some formats may be missing
+         n = XYDRnN4MJjI9Si5F ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] 12INmUQq87Q: nsig extraction failed: Some formats may be missing
+         n = s_YUT2t6aF6UnmUP ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] __WaUsL42R4: nsig extraction failed: Some formats may be missing
+         n = dTAhlcqUMnkbPm2l ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] __WaUsL42R4: nsig extraction failed: Some formats may be missing
+         n = h2FWZSHq8DFUtIX6 ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] _HZHXVqhayc: nsig extraction failed: Some formats may be missing
+         n = MRQ6oZsBT1wR-SVk ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] _HZHXVqhayc: nsig extraction failed: Some formats may be missing
+         n = DBNfU0SSnX2xnYeJ ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] yXPQGR0TbzQ: nsig extraction failed: Some formats may be missing
+         n = cJeMXIXZWF5tjfs6 ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] yXPQGR0TbzQ: nsig extraction failed: Some formats may be missing
+         n = zMj_82LPcd45CPcH ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] cZdKiOuGVF4: nsig extraction failed: Some formats may be missing
+         n = atanxYTVOwKsQsb7 ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] cZdKiOuGVF4: nsig extraction failed: Some formats may be missing
+         n = lOltDb-27khmUtmh ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] 7q88m5MQRhE: nsig extraction failed: Some formats may be missing
+         n = yE_6RtUiVQwk0rI6 ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] 7q88m5MQRhE: nsig extraction failed: Some formats may be missing
+         n = pyCDqzNZALJXVcP7 ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] 0auDcESroEA: nsig extraction failed: Some formats may be missing
+         n = xv18u0LxyJMslwlH ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] 0auDcESroEA: nsig extraction failed: Some formats may be missing
+         n = wPQS-s_Xo6jAWex9 ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] xyWfXAmcFPE: nsig extraction failed: Some formats may be missing
+         n = dKPn6-OCKtqSR2Yp ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] xyWfXAmcFPE: nsig extraction failed: Some formats may be missing
+         n = kBBdgBAHSMmN_49E ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] 1Y3p1EUGXxE: nsig extraction failed: Some formats may be missing
+         n = LthptiLYzU1BI5w3 ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] 1Y3p1EUGXxE: nsig extraction failed: Some formats may be missing
+         n = MneIoehylIOlKFRj ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] OTe3Bbcixow: nsig extraction failed: Some formats may be missing
+         n = xYUwFI0uHCvsX-7b ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] eaLWMHtK8gc: nsig extraction failed: Some formats may be missing
+         n = pVbayDNBXLJkkdLE ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] eaLWMHtK8gc: nsig extraction failed: Some formats may be missing
+         n = LR3-rHzsZurUyOKZ ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] uLUmFYPugEE: nsig extraction failed: Some formats may be missing
+         n = 4zKgxnm1Biz_n1Iv ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] uLUmFYPugEE: nsig extraction failed: Some formats may be missing
+         n = P9EbHPFrYo2uArfy ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
 ERROR: [youtube] _10q6AvlCBk: Private video. Sign in if you've been granted access to this video
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=_10q6AvlCBk 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
@@ -77,6 +369,7 @@ ERROR: [youtube] _10q6AvlCBk: Private video. Sign in if you've been granted acce
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=_10q6AvlCBk 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=_10q6AvlCBk
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 ERROR: [youtube] dMq23nMGGAA: Private video. Sign in if you've been granted access to this video
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=dMq23nMGGAA 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
@@ -98,27 +391,57 @@ ERROR: [youtube] 8n1nMPC9w_E: Private video. Sign in if you've been granted acce
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=8n1nMPC9w_E 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=8n1nMPC9w_E
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] -Fw6QJtgcTc: nsig extraction failed: Some formats may be missing
+         n = 9E2BWEwDGcq7AIbr ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] -Fw6QJtgcTc: nsig extraction failed: Some formats may be missing
+         n = GSyEAe_VuitgPKnA ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] AXRc52PiRvY: nsig extraction failed: Some formats may be missing
+         n = Opxyhy4P8b7FPnDV ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] AXRc52PiRvY: nsig extraction failed: Some formats may be missing
+         n = eLjNsv_EdGLZq0uk ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] gf3D1d3yAzg: nsig extraction failed: Some formats may be missing
+         n = 8xJdSrVxN2eZzn2H ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] gf3D1d3yAzg: nsig extraction failed: Some formats may be missing
+         n = ZqGB1yrsv9IHoVVC ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 ERROR: [youtube] Jtj0zORq4Dw: Private video. Sign in if you've been granted access to this video
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=Jtj0zORq4Dw 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
          If you know what you are doing and want only the best pre-merged format, use "-f b" instead to suppress this warning
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 ERROR: [youtube] Jtj0zORq4Dw: Private video. Sign in if you've been granted access to this video
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=Jtj0zORq4Dw 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=Jtj0zORq4Dw
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 ERROR: [youtube] kf0S55a0neY: Private video. Sign in if you've been granted access to this video
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=kf0S55a0neY 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
          If you know what you are doing and want only the best pre-merged format, use "-f b" instead to suppress this warning
-WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 ERROR: [youtube] kf0S55a0neY: Private video. Sign in if you've been granted access to this video
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=kf0S55a0neY 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=kf0S55a0neY
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
 ERROR: [youtube] BjIftYQW3-I: Private video. Sign in if you've been granted access to this video
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=BjIftYQW3-I 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
@@ -129,6 +452,7 @@ ERROR: [youtube] BjIftYQW3-I: Private video. Sign in if you've been granted acce
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=BjIftYQW3-I 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=BjIftYQW3-I
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 ERROR: [youtube] fEvjxTtFs6Q: Private video. Sign in if you've been granted access to this video
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=fEvjxTtFs6Q 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
@@ -139,6 +463,16 @@ ERROR: [youtube] fEvjxTtFs6Q: Private video. Sign in if you've been granted acce
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=fEvjxTtFs6Q 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=fEvjxTtFs6Q
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] vMqbvQ_b6SA: nsig extraction failed: Some formats may be missing
+         n = -DaORTIwk4lqESWJ ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] vMqbvQ_b6SA: nsig extraction failed: Some formats may be missing
+         n = MxHRvTxY84uiyJqE ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] tiD8Ji_2UrA: nsig extraction failed: Some formats may be missing
+         n = O1CdQneTwfMffQF2 ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] tiD8Ji_2UrA: nsig extraction failed: Some formats may be missing
+         n = nuw-j1h_L2OzRLpd ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
 ERROR: [youtube] oKTo4JtwKJQ: Video unavailable
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=oKTo4JtwKJQ 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
@@ -149,7 +483,10 @@ ERROR: [youtube] oKTo4JtwKJQ: Video unavailable
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=oKTo4JtwKJQ 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=oKTo4JtwKJQ
-WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] 9KqlCczi9Z4: nsig extraction failed: Some formats may be missing
+         n = g0SEI6RNzckG2-HM ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] 9KqlCczi9Z4: nsig extraction failed: Some formats may be missing
+         n = dLoTHEMdO5MnltUM ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
 ERROR: [youtube] XFPVhm94Ls0: Video unavailable
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=XFPVhm94Ls0 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
@@ -160,6 +497,7 @@ ERROR: [youtube] XFPVhm94Ls0: Video unavailable
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=XFPVhm94Ls0 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=XFPVhm94Ls0
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 ERROR: [youtube] gCrFUMGk-JM: Video unavailable
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=gCrFUMGk-JM 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
@@ -172,19 +510,33 @@ Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=gCr
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=gCrFUMGk-JM
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
 ERROR: [youtube] vEk750p39aE: Video unavailable
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=vEk750p39aE 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Result: 
 WARNING: "-f best" selects the best pre-merged format which is often not the best option.
          To let yt-dlp download and merge the best available formats, simply do not pass any format selection.
          If you know what you are doing and want only the best pre-merged format, use "-f b" instead to suppress this warning
+WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
+WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (2/3)...
 ERROR: [youtube] vEk750p39aE: Video unavailable
 Fallback Command: yt-dlp -f 'best' --get-url https://www.youtube.com/watch?v=vEk750p39aE 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
 Fallback Result: 
 Failed to retrieve stream URL for https://www.youtube.com/watch?v=vEk750p39aE
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] rinw_lpsqxs: nsig extraction failed: Some formats may be missing
+         n = Dfvv6bEgvGbxYTQn ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] rinw_lpsqxs: nsig extraction failed: Some formats may be missing
+         n = 6JQCBsusoqJeYBwk ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] V3YOxwRwL1s: nsig extraction failed: Some formats may be missing
+         n = -ZN2Gej_sN9xpm70 ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] Ai7TUGa52lY: nsig extraction failed: Some formats may be missing
+         n = LLmB5mzCQSWU4m0P ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
-WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
-WARNING: [youtube] API returned broken formats (poToken experiment detected). Retrying (1/3)...
-WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
+WARNING: [youtube] vdNXkuK6cHw: nsig extraction failed: Some formats may be missing
+         n = FX0To0VP3_1PSjLU ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
+WARNING: [youtube] By78uyVYvBE: nsig extraction failed: Some formats may be missing
+         n = iLs0EjbWwcp9PmoG ; player = https://www.youtube.com/s/player/20dfca59/player_ias.vflset/en_US/base.js
 WARNING: [youtube] Webpage contains broken formats (poToken experiment detected). Ignoring initial player response
