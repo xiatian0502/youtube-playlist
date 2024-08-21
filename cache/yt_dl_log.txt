@@ -247,7 +247,6 @@ ERROR: [youtube] zaRkl3GlBac: Sign in to confirm you’re not a bot. This helps 
 ERROR: [youtube] A6RMws7xI6o: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] HtjqvW7724c: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] kxG6HMennuw: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
-ERROR: [youtube] Q2RAgCW-mx8: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] ikE1YGoqJ9Q: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] GBhUBsuGfOo: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] XqS1EuObZvg: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
