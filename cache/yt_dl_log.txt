@@ -1,4 +1,4 @@
-yt-dlp version: 2024.09.27
+yt-dlp version: 2024.10.07
 
 ERROR: [youtube] 2vowHo2y-hI: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] dNmwPWRdv_0: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
@@ -41,7 +41,7 @@ ERROR: [youtube] VHUfkR6Vr8Q: Sign in to confirm you’re not a bot. This helps 
 ERROR: [youtube] UlwRh3UWic4: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] BMCCzi74HXM: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] Wx04eiZjesc: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
-ERROR: [youtube] FyliokAgv6g: Video unavailable. This video contains content from SESAC. It is not available in your country.
+ERROR: [youtube] FyliokAgv6g: Join this channel from your computer or Android app to get access to members-only content like this video.
 ERROR: [youtube] q4OHD7PDHtk: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] gUnqHaTFPOI: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] dEUqgTQjPn8: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
@@ -117,7 +117,7 @@ ERROR: [youtube] C-SOHj1x3Iw: Sign in to confirm you’re not a bot. This helps 
 ERROR: [youtube] _CTSBZZujUA: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] 4hnB6pQ4Z9c: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] qCRRmg4jtKY: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
-ERROR: [youtube] fzrbfwDwxpk: Video unavailable. This video contains content from SESAC. It is not available in your country.
+ERROR: [youtube] fzrbfwDwxpk: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] Uh5memYLlzg: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] 33acW3uUPpc: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] ipWmEfg2BVY: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
@@ -201,7 +201,7 @@ ERROR: [youtube] 4u1yELG-mCs: Sign in to confirm you’re not a bot. This helps 
 ERROR: [youtube] hrDqhAvInEE: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] MSDCiSkfw7o: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] 6QUx0GvgPDA: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
-ERROR: [youtube] l6gwk_6_9Kc: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
+ERROR: [youtube] l6gwk_6_9Kc: Private video. Sign in if you've been granted access to this video
 ERROR: [youtube] DynFGQ8P2d8: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] LjhzGe8a_Ys: Video unavailable. This video is no longer available due to a copyright claim by Dental Digest
 Command: yt-dlp -f 'bestvideo[height=1080]+bestaudio/best' --get-url https://www.youtube.com/watch?v=LjhzGe8a_Ys 2>> /home/runner/work/youtube-playlist/youtube-playlist/cache/yt_dl_log.txt 
@@ -228,7 +228,7 @@ ERROR: [youtube] NJnQgyDrsHg: Sign in to confirm you’re not a bot. This helps 
 ERROR: [youtube] 0BRWs2U7fbo: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] 17A3v9jZmDU: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] 6lBu7dmEOGw: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
-ERROR: [youtube] 4w1MG1I_3do: Video unavailable. This video contains content from SESAC. It is not available in your country.
+ERROR: [youtube] 4w1MG1I_3do: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] L-1xHI0dTD8: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] DVpVUOLWaUY: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] RxjwJDpMdXw: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
@@ -261,7 +261,7 @@ ERROR: [youtube] qXUem8ObDq8: Sign in to confirm you’re not a bot. This helps 
 ERROR: [youtube] ISHqz5tk8kI: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] XiqL8VzTjOM: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] lsk0CLl7b8M: Sign in to confirm your age. This video may be inappropriate for some users.
-ERROR: [youtube] 2juaDakRub8: Video unavailable. This video contains content from SESAC. It is not available in your country.
+ERROR: [youtube] 2juaDakRub8: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] GfovourJVnA: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] sL8C-8MyQsc: Sign in to confirm your age. This video may be inappropriate for some users.
 ERROR: [youtube] dTXrEoAS_yc: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
@@ -287,7 +287,7 @@ ERROR: [youtube] _47R-zF8rv0: Sign in to confirm you’re not a bot. This helps 
 ERROR: [youtube] 1twzTNjAzYw: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] ekspgysGF8E: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] Ev0hjj3Catk: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
-ERROR: [youtube] skjdfpbsKtc: Video unavailable. This video contains content from SESAC. It is not available in your country.
+ERROR: [youtube] skjdfpbsKtc: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] -Nx5QjYq9vM: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] 0z_KnLIxijs: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] af-obgYbB2I: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
@@ -357,8 +357,8 @@ ERROR: [youtube] MOUOIfg_gRs: Sign in to confirm you’re not a bot. This helps 
 ERROR: [youtube] g1RfNuDVR-c: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] VORXZ1Y7nJs: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] PGHRI63zhq4: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
-ERROR: [youtube] z4CgqS9x81I: Video unavailable. This video contains content from SESAC. It is not available in your country.
-ERROR: [youtube] UZ3pF5_UWUQ: Video unavailable. This video contains content from SESAC. It is not available in your country.
+ERROR: [youtube] z4CgqS9x81I: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
+ERROR: [youtube] UZ3pF5_UWUQ: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] ms3_vUWnjzQ: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] l13dcJ8H9Bo: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] dO_GVt_qmRE: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
