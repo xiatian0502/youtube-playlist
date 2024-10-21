@@ -239,7 +239,7 @@ ERROR: [youtube] QCX0rgYDtb8: Sign in to confirm you’re not a bot. This helps 
 ERROR: [youtube] whjuSexCWq0: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] SdrhYlaG_Qs: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] _WcgZepkVHA: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
-ERROR: [youtube] 6nq6xD9KB0U: Sign in to confirm your age. This video may be inappropriate for some users.
+ERROR: [youtube] 6nq6xD9KB0U: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] 0gmDgSG3_8E: Sign in to confirm your age. This video may be inappropriate for some users.
 ERROR: [youtube] VxS-wAhDfQ8: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] tCAth85zvbE: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
