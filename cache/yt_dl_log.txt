@@ -1,4 +1,4 @@
-yt-dlp version: 2024.10.07
+yt-dlp version: 2024.10.22
 
 ERROR: [youtube] 2vowHo2y-hI: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] dNmwPWRdv_0: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
@@ -34,7 +34,7 @@ ERROR: [youtube] UojYOWIkkR8: Sign in to confirm you’re not a bot. This helps 
 ERROR: [youtube] xLmD5AFd_jo: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] pnMY0wUxuUA: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] U0UP072ByFc: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
-ERROR: [youtube] NDItGkXJA3M: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
+ERROR: [youtube] NDItGkXJA3M: Private video. Sign in if you've been granted access to this video
 ERROR: [youtube] twJKNT2yXpM: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] VvjRvGDXEME: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] VHUfkR6Vr8Q: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
@@ -673,7 +673,6 @@ ERROR: [youtube] IPmbY8VOaBg: Sign in to confirm you’re not a bot. This helps 
 ERROR: [youtube] M9AckbM5ttk: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] 1pj6iS_BPVY: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] vdNXkuK6cHw: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
-ERROR: [youtube] LgeteULPJO8: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] RqtyT2HZq9Y: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] By78uyVYvBE: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] jNcPpEnAg8o: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
