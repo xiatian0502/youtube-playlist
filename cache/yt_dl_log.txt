@@ -1,4 +1,4 @@
-yt-dlp version: 2024.10.22
+yt-dlp version: 2024.11.04
 
 ERROR: [youtube] 2vowHo2y-hI: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] dNmwPWRdv_0: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
@@ -439,7 +439,6 @@ ERROR: [youtube] avovavC8DEI: Sign in to confirm you’re not a bot. This helps 
 ERROR: [youtube] UIp-qO22kQo: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] 9xfaNMfT_rY: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] floPQomkJas: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
-ERROR: [youtube] 3yjxg8wbzQQ: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] IUDIz1WwBXg: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] V6am3hae-Z0: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
 ERROR: [youtube] T6FBfNpiBYw: Sign in to confirm you’re not a bot. This helps protect our community. Learn more
