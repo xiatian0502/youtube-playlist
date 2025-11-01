@@ -1189,7 +1189,12 @@ WARNING: [youtube] No title found in player responses; falling back to title fro
 ERROR: [youtube] IPmbY8VOaBg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies
 WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
 ERROR: [youtube] M9AckbM5ttk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies
-WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
+WARNING: [youtube] Falling back to generic n function search
+         player = https://www.youtube.com/s/player/c6d7bdc9/player_ias.vflset/en_US/base.js
+WARNING: [youtube] 1pj6iS_BPVY: nsig extraction failed: Some formats may be missing
+         n = 4jEM3X56_jUhsHRz ; player = https://www.youtube.com/s/player/c6d7bdc9/player_ias.vflset/en_US/base.js
+         Please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+WARNING: [youtube] 1pj6iS_BPVY: Some web client https formats have been skipped as they are missing a url. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
 ERROR: [youtube] 1pj6iS_BPVY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies
 WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing
 ERROR: [youtube] vdNXkuK6cHw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies
